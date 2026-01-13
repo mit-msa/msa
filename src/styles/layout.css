@@ -41,6 +41,7 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .page__main {
@@ -75,7 +76,7 @@
 }
 
 .header__logo-img {
-  height: 50px;
+  height: 64px;
   width: auto;
 }
 
@@ -421,17 +422,21 @@
 
 .hero {
   position: relative;
-  padding: var(--space-20) 0;
-  background: linear-gradient(135deg, var(--color-primary-700) 0%, var(--color-primary-600) 100%);
+  padding: var(--space-20) 0 var(--space-20);
+  background: linear-gradient(
+    180deg,
+    var(--color-primary-600) 0%,
+    var(--color-primary-500) 15%,
+    var(--color-primary-400) 45%,
+    var(--color-primary-200) 65%,
+    var(--color-primary-100) 90%,
+    var(--color-neutral-0) 100%
+  );
   color: var(--color-neutral-0);
-  overflow: hidden;
 }
 
 .hero--lg {
-  padding: var(--space-24) 0;
-  min-height: 60vh;
-  display: flex;
-  align-items: center;
+  padding: var(--space-20) 0 var(--space-16);
 }
 
 .hero__content {
@@ -441,38 +446,271 @@
 }
 
 .hero__title {
-  font-size: var(--font-size-4xl);
-  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-tight);
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-2);
+  letter-spacing: -0.01em;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .hero__subtitle {
-  font-size: var(--font-size-xl);
-  opacity: 0.9;
-  margin-bottom: var(--space-8);
+  font-size: var(--font-size-base);
+  opacity: 0.95;
+  margin-bottom: var(--space-5);
   line-height: var(--line-height-relaxed);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-4);
+  gap: var(--space-3);
 }
 
 .hero__pattern {
+  display: none;
+}
+
+/* Show animated pattern only on home page */
+.hero--home .hero__pattern {
+  display: block;
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 50%;
+  inset: -50%;
+  width: 200%;
+  height: 200%;
   opacity: 0.1;
-  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+  /* 8-pointed Islamic star pattern (Khatam) */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='1'%3E%3C!-- 8-pointed star --%3E%3Cpath d='M40 8 L47 33 L72 40 L47 47 L40 72 L33 47 L8 40 L33 33 Z'/%3E%3Cpath d='M40 8 L47 33 L72 40 L47 47 L40 72 L33 47 L8 40 L33 33 Z' transform='rotate(45 40 40)'/%3E%3C!-- Connecting lines to create tessellation --%3E%3Cpath d='M8 40 L0 40 M72 40 L80 40 M40 8 L40 0 M40 72 L40 80'/%3E%3Cpath d='M33 33 L0 0 M47 33 L80 0 M47 47 L80 80 M33 47 L0 80' stroke-width='0.5'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 80px 80px;
+  animation: pattern-waterfall 30s linear infinite;
+}
+
+.hero__cursor {
+  animation: blink 1s step-end infinite;
+  font-weight: var(--font-weight-normal);
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes pattern-waterfall {
+  from {
+    transform: translate(-25%, -25%);
+  }
+  to {
+    transform: translate(0%, 0%);
+  }
+}
+
+/* Accessibility: respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .hero--home .hero__pattern {
+    animation: none;
+  }
+}
+
+/* Prayer page - Animated mosque skyline */
+.hero--prayer .hero__pattern {
+  display: none;
+}
+
+.mosque-animation {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.mosque-svg {
+  position: absolute;
+  bottom: 8%;
+}
+
+/* Position each mosque across the banner */
+.mosque-1 {
+  left: -2%;
+  width: 140px;
+  height: 100px;
+  bottom: 15%;
+}
+
+.mosque-2 {
+  left: 8%;
+  width: 220px;
+  height: 160px;
+}
+
+.mosque-3 {
+  left: 28%;
+  width: 200px;
+  height: 145px;
+  bottom: 12%;
+}
+
+.mosque-4 {
+  right: 22%;
+  width: 380px;
+  height: 270px;
+}
+
+.mosque-5 {
+  right: 8%;
+  width: 170px;
+  height: 125px;
+  bottom: 14%;
+}
+
+.mosque-6 {
+  right: -3%;
+  width: 210px;
+  height: 155px;
+}
+
+.mosque-7 {
+  right: -12%;
+  width: 130px;
+  height: 95px;
+  bottom: 18%;
+}
+
+.mosque-part {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.5);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0;
+}
+
+/* Staggered animation - mosques appear from left to right */
+.mosque-1-parts {
+  animation: mosque-appear 10s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+.mosque-2-dome {
+  animation: mosque-appear 10s ease-in-out infinite;
+  animation-delay: 0.15s;
+}
+.mosque-2-minaret {
+  animation: mosque-appear 10s ease-in-out infinite;
+  animation-delay: 0.25s;
+}
+
+.mosque-3-parts {
+  animation: mosque-appear 10s ease-in-out infinite;
+  animation-delay: 0.4s;
+}
+
+.mosque-4-dome {
+  animation: mosque-appear 10s ease-in-out infinite;
+  animation-delay: 0.6s;
+}
+.mosque-4-minaret-left {
+  animation: mosque-appear 10s ease-in-out infinite;
+  animation-delay: 0.75s;
+}
+.mosque-4-minaret-right {
+  animation: mosque-appear 10s ease-in-out infinite;
+  animation-delay: 0.9s;
+}
+
+.mosque-5-parts {
+  animation: mosque-appear 10s ease-in-out infinite;
+  animation-delay: 1.05s;
+}
+
+.mosque-6-dome {
+  animation: mosque-appear 10s ease-in-out infinite;
+  animation-delay: 1.2s;
+}
+.mosque-6-minaret {
+  animation: mosque-appear 10s ease-in-out infinite;
+  animation-delay: 1.3s;
+}
+
+.mosque-7-parts {
+  animation: mosque-appear 10s ease-in-out infinite;
+  animation-delay: 1.45s;
+}
+
+@keyframes mosque-appear {
+  0%, 3% {
+    opacity: 0;
+  }
+  10%, 75% {
+    opacity: 1;
+  }
+  90%, 100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mosque-part {
+    animation: none;
+    opacity: 0.5;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .mosque-1 { left: -5%; width: 120px; height: 85px; }
+  .mosque-2 { left: 5%; width: 180px; height: 130px; }
+  .mosque-3 { left: 22%; width: 170px; height: 120px; }
+  .mosque-4 { right: 15%; width: 320px; height: 230px; }
+  .mosque-5 { right: 3%; width: 150px; height: 110px; }
+  .mosque-6 { right: -8%; width: 180px; height: 130px; }
+  .mosque-7 { display: none; }
+}
+
+@media (max-width: 900px) {
+  .mosque-1 { display: none; }
+  .mosque-2 { left: 2%; width: 160px; height: 115px; }
+  .mosque-3 { left: 18%; width: 150px; height: 105px; }
+  .mosque-4 { right: 12%; width: 280px; height: 200px; }
+  .mosque-5 { right: 0%; width: 140px; height: 100px; }
+  .mosque-6 { right: -10%; width: 160px; height: 115px; }
+}
+
+@media (max-width: 768px) {
+  .mosque-2 { display: none; }
+  .mosque-3 { left: 3%; width: 140px; height: 100px; }
+  .mosque-4 { right: 18%; width: 240px; height: 170px; }
+  .mosque-5 { display: none; }
+  .mosque-6 { right: -5%; width: 150px; height: 110px; }
+}
+
+@media (max-width: 640px) {
+  .mosque-3 { display: none; }
+  .mosque-4 { right: 10%; width: 200px; height: 145px; }
+  .mosque-6 { right: -8%; width: 130px; height: 95px; }
+  .mosque-part { stroke-width: 2; }
 }
 
 @media (min-width: 768px) {
+  .hero {
+    padding: var(--space-20) 0 var(--space-16);
+  }
+
+  .hero--lg {
+    padding: var(--space-24) 0 var(--space-20);
+  }
+
   .hero__title {
-    font-size: var(--font-size-5xl);
+    font-size: var(--font-size-3xl);
+  }
+
+  .hero__subtitle {
+    font-size: var(--font-size-lg);
   }
 }
 

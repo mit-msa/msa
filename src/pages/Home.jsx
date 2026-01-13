@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Button, Card, Section, Hero, ClockIcon, LocationIcon, UsersIcon, CalendarIcon } from '../components/ui';
+import { Button, Card, Section, Hero, LocationIcon, UsersIcon, CalendarIcon } from '../components/ui';
 
 // Images
 import communityImage from '../assets/images/community.jpg';
@@ -12,9 +12,10 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <Hero
-        title="Welcome to MIT MSA"
+        typingTitles={["Welcome to the MIT MSA!", "As-salamu alaikum!"]}
         subtitle="A close-knit and welcoming community dedicated to supporting Muslims at MIT in their practice of Islam and building bridges of understanding with people of all faiths."
         size="lg"
+        className="hero--home"
         actions={
           <>
             <Button to="/join" variant="secondary" size="lg">
@@ -123,13 +124,19 @@ export default function Home() {
             </Card>
           </div>
 
-          <div className="text-center mt-10">
-            <Button
-              href="https://calendar.mit.edu/group/muslim_students_association"
-              variant="outline"
-            >
-              View Full Calendar
-            </Button>
+          <div className="calendar-embed mt-10">
+            <iframe
+              src="https://calendar.google.com/calendar/embed?src=mit.msa.docs%40gmail.com&ctz=America%2FNew_York"
+              title="MIT MSA Google Calendar"
+              style={{
+                border: 0,
+                width: '100%',
+                height: '600px',
+                borderRadius: 'var(--radius-lg)',
+              }}
+              frameBorder="0"
+              scrolling="no"
+            />
           </div>
         </div>
       </Section>
@@ -197,6 +204,9 @@ export default function Home() {
       <Section>
         <div className="container">
           <div className="cta-section">
+            <div className="cta-section__pattern-wrapper">
+              <div className="cta-section__pattern" aria-hidden="true" />
+            </div>
             <h2 className="cta-section__title">Stay Connected</h2>
             <p className="cta-section__text">
               Join our mailing list to receive updates about events, prayer
