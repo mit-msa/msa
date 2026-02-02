@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { Layout } from './components/layout';
-import { Home, About, Prayer, Resources, Leadership, Join } from './pages';
+import { Home, Prayer, Resources, Leadership, Join } from './pages';
 
 /**
  * Main App component with routing configuration
@@ -13,7 +13,6 @@ export default function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="about" element={<About />} />
         <Route path="prayer" element={<Prayer />} />
         <Route path="resources" element={<Resources />} />
         <Route path="leadership" element={<Leadership />} />

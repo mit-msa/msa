@@ -8,97 +8,6 @@ import building45Image from '../assets/images/prayer/building_45.jpeg';
 import oasisImage from '../assets/images/prayer/oasis.jpeg';
 
 /**
- * Animated mosque skyline component - multiple mosques appear sequentially
- */
-function MosqueAnimation() {
-  return (
-    <div className="mosque-animation" aria-hidden="true">
-      {/* Far left - tiny distant mosque */}
-      <svg viewBox="0 0 200 140" className="mosque-svg mosque-1">
-        <g className="mosque-part mosque-1-parts">
-          <path d="M60 95 Q60 45 100 45 Q140 45 140 95" />
-          <path d="M55 95 L145 95 L145 115 L55 115 Z" />
-          <path d="M150 115 L150 55 L170 55 L170 115" />
-          <path d="M147 55 L160 30 L173 55" />
-        </g>
-      </svg>
-
-      {/* Left mosque */}
-      <svg viewBox="0 0 300 200" className="mosque-svg mosque-2">
-        <g className="mosque-part mosque-2-dome">
-          <path d="M80 130 Q80 60 150 60 Q220 60 220 130" />
-          <path d="M70 130 L230 130 L230 160 L70 160 Z" />
-        </g>
-        <g className="mosque-part mosque-2-minaret">
-          <path d="M30 160 L30 70 L55 70 L55 160" />
-          <path d="M25 70 L42 35 L60 70" />
-        </g>
-      </svg>
-
-      {/* Center-left - medium mosque */}
-      <svg viewBox="0 0 280 190" className="mosque-svg mosque-3">
-        <g className="mosque-part mosque-3-parts">
-          <path d="M90 125 Q90 55 140 55 Q190 55 190 125" />
-          <path d="M80 125 L200 125 L200 155 L80 155 Z" />
-          <path d="M35 155 L35 75 L60 75 L60 155" />
-          <path d="M30 75 L47 40 L65 75" />
-          <path d="M220 155 L220 85 L245 85 L245 155" />
-          <path d="M215 85 L232 55 L250 85" />
-        </g>
-      </svg>
-
-      {/* Center mosque (main, largest) */}
-      <svg viewBox="0 0 400 250" className="mosque-svg mosque-4">
-        <g className="mosque-part mosque-4-dome">
-          <path d="M120 160 Q120 60 200 60 Q280 60 280 160" />
-          <path d="M110 160 L290 160 L290 200 L110 200 Z" />
-        </g>
-        <g className="mosque-part mosque-4-minaret-left">
-          <path d="M50 200 L50 80 L80 80 L80 200" />
-          <path d="M45 80 L65 40 L85 80" />
-        </g>
-        <g className="mosque-part mosque-4-minaret-right">
-          <path d="M320 200 L320 80 L350 80 L350 200" />
-          <path d="M315 80 L335 40 L355 80" />
-        </g>
-      </svg>
-
-      {/* Center-right - small mosque */}
-      <svg viewBox="0 0 220 160" className="mosque-svg mosque-5">
-        <g className="mosque-part mosque-5-parts">
-          <path d="M60 110 Q60 50 110 50 Q160 50 160 110" />
-          <path d="M50 110 L170 110 L170 135 L50 135 Z" />
-          <path d="M175 135 L175 65 L195 65 L195 135" />
-          <path d="M172 65 L185 40 L198 65" />
-        </g>
-      </svg>
-
-      {/* Right mosque */}
-      <svg viewBox="0 0 250 180" className="mosque-svg mosque-6">
-        <g className="mosque-part mosque-6-dome">
-          <path d="M70 120 Q70 50 125 50 Q180 50 180 120" />
-          <path d="M60 120 L190 120 L190 150 L60 150 Z" />
-        </g>
-        <g className="mosque-part mosque-6-minaret">
-          <path d="M200 150 L200 60 L225 60 L225 150" />
-          <path d="M195 60 L212 30 L230 60" />
-        </g>
-      </svg>
-
-      {/* Far right - tiny distant mosque */}
-      <svg viewBox="0 0 180 130" className="mosque-svg mosque-7">
-        <g className="mosque-part mosque-7-parts">
-          <path d="M50 90 Q50 45 90 45 Q130 45 130 90" />
-          <path d="M45 90 L135 90 L135 110 L45 110 Z" />
-          <path d="M20 110 L20 55 L40 55 L40 110" />
-          <path d="M17 55 L30 30 L43 55" />
-        </g>
-      </svg>
-    </div>
-  );
-}
-
-/**
  * Prayer page - Prayer spaces and times information
  */
 export default function Prayer() {
@@ -147,9 +56,7 @@ export default function Prayer() {
         title="Prayer at MIT"
         subtitle="Find prayer spaces, Jumu'ah time, and everything you need for your daily prayers."
         className="hero--prayer"
-      >
-        <MosqueAnimation />
-      </Hero>
+      />
 
       {/* Jumu'ah Section */}
       <Section id="jumuah">

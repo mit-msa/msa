@@ -469,11 +469,6 @@
 }
 
 .hero__pattern {
-  display: none;
-}
-
-/* Show animated pattern only on home page */
-.hero--home .hero__pattern {
   display: block;
   position: absolute;
   inset: -50%;
@@ -512,14 +507,9 @@
 
 /* Accessibility: respect user's motion preferences */
 @media (prefers-reduced-motion: reduce) {
-  .hero--home .hero__pattern {
+  .hero__pattern {
     animation: none;
   }
-}
-
-/* Prayer page - Animated mosque skyline */
-.hero--prayer .hero__pattern {
-  display: none;
 }
 
 .mosque-animation {
