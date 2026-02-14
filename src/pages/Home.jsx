@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { Button, Card, Section, Hero, LocationIcon, UsersIcon, CalendarIcon } from '../components/ui';
 
 // Images
-import communityImage from '../assets/images/community.jpg';
+import communityImage from '../assets/images/hs.svg';
 
 /**
  * Home page component - Landing page for MIT MSA website
