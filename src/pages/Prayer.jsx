@@ -137,16 +137,29 @@ export default function Prayer() {
             </tbody>
           </table>
 
-          {prayerTimesData.lastUpdated && (
-            <p className="text-sm text-muted">
-              Last updated: {new Date(prayerTimesData.lastUpdated).toLocaleDateString('en-US', {
-                weekday: 'long',
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-              })}
-            </p>
-          )}
+          {prayerTimesData.lastUpdated && (() => {
+            const date = new Date(prayerTimesData.lastUpdated);
+            const isValidDate = !isNaN(date.getTime());
+            
+            if (!isValidDate) {
+              return (
+                <p className="text-sm text-muted">
+                  Last updated: Recently
+                </p>
+              );
+            }
+            
+            return (
+              <p className="text-sm text-muted">
+                Last updated: {date.toLocaleDateString('en-US', {
+                  weekday: 'long',
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric',
+                })}
+              </p>
+            );
+          })()}
 
           <div className="info-box mt-6">
             <h3 className="info-box__title">Additional Resources</h3>

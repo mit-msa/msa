@@ -13,7 +13,7 @@ The generated JSON file will be used by the frontend during build time.
 import asyncio
 import json
 import os
-from datetime import datetime, timedelta
+from datetime import datetime, timezone
 from pathlib import Path
 
 # Load environment variables from .env file
@@ -28,7 +28,7 @@ CONFIG = {
     "username": os.environ.get("MAWAQIT_USERNAME", ""),
     "password": os.environ.get("MAWAQIT_PASSWORD", ""),
     "api_token": os.environ.get("MAWAQIT_API_TOKEN", ""),  # Alternative to username/password
-    "mosque_uuid": os.environ.get("MAWAQIT_MOSQUE_UUID", "18650"),
+    "mosque_uuid": os.environ.get("MAWAQIT_MOSQUE_UUID", "5b69f778-dcca-464f-a318-8fb6b8890d20"),  # MIT Musallah UUID
     # MIT coordinates for finding nearby mosques
     "latitude": 42.3601,
     "longitude": -71.0942,
@@ -147,7 +147,7 @@ def format_prayer_data(raw_data):
             "address": raw_data.get("localisation", "W11-110, MIT, Cambridge, MA"),
             "uuid": CONFIG["mosque_uuid"],
         },
-        "lastUpdated": datetime.now().isoformat(),
+        "lastUpdated": datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace('+00:00', 'Z'),
         "jumua": raw_data.get("jumua", "13:15"),
         "times": times,
         "iqama": iqama,
@@ -174,7 +174,7 @@ def create_placeholder_data():
             "address": "W11-110, MIT, Cambridge, MA",
             "uuid": CONFIG["mosque_uuid"],
         },
-        "lastUpdated": datetime.now().isoformat(),
+        "lastUpdated": datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace('+00:00', 'Z'),
         "status": "placeholder",
         "message": "Prayer times will be available once Mawaqit credentials are configured.",
         "jumua": "13:15",

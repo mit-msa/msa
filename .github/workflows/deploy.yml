@@ -2,7 +2,7 @@ name: Update Prayer Times and Deploy
 
 on:
   schedule:
-    # Run daily at 2 AM EST (7 AM UTC)
+    # Run daily at 07:00 UTC (2 AM EST / 3 AM EDT)
     - cron: '0 7 * * *'
   workflow_dispatch: # Allow manual trigger
 
