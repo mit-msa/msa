@@ -1,0 +1,57 @@
+name: Build Site Daily
+
+on:
+  schedule:
+    # Run daily at 6 AM EST (11:00 UTC)
+    - cron: '0 11 * * *'
+  push:
+    branches:
+      - main
+  workflow_dispatch: # Allow manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Python dependencies
+        run: pip install mawaqit python-dotenv
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Fetch prayer times from Mawaqit
+        env:
+          MAWAQIT_USERNAME: ${{ secrets.MAWAQIT_USERNAME }}
+          MAWAQIT_PASSWORD: ${{ secrets.MAWAQIT_PASSWORD }}
+          MAWAQIT_MOSQUE_UUID: ${{ secrets.MAWAQIT_MOSQUE_UUID }}
+        run: python scripts/fetch_prayer_times.py
+
+      - name: Build static site
+        run: npm run build
+
+      - name: Commit updated prayer times and dist
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add src/data/prayer_times.json
+          git add -f dist/
+          git diff --staged --quiet || git commit -m "🕌 Daily build: $(date +'%Y-%m-%d')"
+          git push
