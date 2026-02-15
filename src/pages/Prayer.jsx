@@ -31,6 +31,29 @@ function formatTime12Hour(time24) {
 }
 
 /**
+ * Formats a date string for display, handling invalid dates gracefully
+ * @param {string} dateString - ISO date string
+ * @returns {string} Formatted date string or fallback text
+ */
+function formatLastUpdated(dateString) {
+  if (!dateString) return null;
+  
+  const date = new Date(dateString);
+  const isValidDate = !isNaN(date.getTime());
+  
+  if (!isValidDate) {
+    return 'Recently';
+  }
+  
+  return date.toLocaleDateString('en-US', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+}
+
+/**
  * Prayer page - Prayer spaces and times information
  */
 export default function Prayer() {
@@ -137,29 +160,11 @@ export default function Prayer() {
             </tbody>
           </table>
 
-          {prayerTimesData.lastUpdated && (() => {
-            const date = new Date(prayerTimesData.lastUpdated);
-            const isValidDate = !isNaN(date.getTime());
-            
-            if (!isValidDate) {
-              return (
-                <p className="text-sm text-muted">
-                  Last updated: Recently
-                </p>
-              );
-            }
-            
-            return (
-              <p className="text-sm text-muted">
-                Last updated: {date.toLocaleDateString('en-US', {
-                  weekday: 'long',
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric',
-                })}
-              </p>
-            );
-          })()}
+          {prayerTimesData.lastUpdated && (
+            <p className="text-sm text-muted">
+              Last updated: {formatLastUpdated(prayerTimesData.lastUpdated)}
+            </p>
+          )}
 
           <div className="info-box mt-6">
             <h3 className="info-box__title">Additional Resources</h3>
