@@ -13,6 +13,7 @@ The generated JSON file will be used by the frontend during build time.
 import asyncio
 import json
 import os
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -212,7 +213,6 @@ async def main():
         if has_credentials and fail_on_error:
             print("ERROR: Failed to fetch prayer times with valid credentials.")
             print("Refusing to deploy placeholder data. Check Mawaqit API status.")
-            import sys
             sys.exit(1)
         
         print("Using placeholder data. Configure Mawaqit credentials to fetch real times.")
