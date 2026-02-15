@@ -11,6 +11,26 @@ import building45Image from '../assets/images/prayer/building_45.jpeg';
 import oasisImage from '../assets/images/prayer/oasis.jpeg';
 
 /**
+ * Converts 24-hour time format (HH:MM) to 12-hour format with AM/PM
+ * @param {string} time24 - Time in 24-hour format (e.g., "13:15")
+ * @returns {string} Time in 12-hour format (e.g., "1:15 PM")
+ */
+function formatTime12Hour(time24) {
+  if (!time24 || typeof time24 !== 'string') return time24;
+  
+  const [hours, minutes] = time24.split(':');
+  const hour = parseInt(hours, 10);
+  const min = minutes || '00';
+  
+  if (isNaN(hour)) return time24;
+  
+  const period = hour >= 12 ? 'PM' : 'AM';
+  const hour12 = hour % 12 || 12;
+  
+  return `${hour12}:${min} ${period}`;
+}
+
+/**
  * Prayer page - Prayer spaces and times information
  */
 export default function Prayer() {
@@ -161,7 +181,7 @@ export default function Prayer() {
           <div className="info-box mb-8">
             <h3 className="info-box__title">Every Friday</h3>
             <p className="info-box__text">
-              <strong>Khutbah:</strong> {prayerTimesData.jumua || '1:15 PM'} EST<br />
+              <strong>Khutbah:</strong> {formatTime12Hour(prayerTimesData.jumua) || '1:15 PM'} EST<br />
               <strong>Location:</strong> MIT Musalla (Room W11-110)
             </p>
           </div>
