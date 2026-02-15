@@ -1,0 +1,24 @@
+{
+  "mosque": {
+    "name": "MIT Musallah - CAMBRIDGE",
+    "address": "40 Massachusetts Ave 02139 CAMBRIDGE United States",
+    "uuid": "5b69f778-dcca-464f-a318-8fb6b8890d20"
+  },
+  "lastUpdated": "2026-02-15T13:27:05.011746",
+  "jumua": "13:15",
+  "times": {
+    "fajr": "05:07",
+    "sunrise": "06:41",
+    "dhuhr": "11:58",
+    "asr": "14:49",
+    "maghrib": "17:17",
+    "isha": "18:35"
+  },
+  "iqama": {
+    "fajr": "06:15",
+    "dhuhr": "12:30",
+    "asr": "15:30",
+    "maghrib": "17:22",
+    "isha": "18:40"
+  }
+}

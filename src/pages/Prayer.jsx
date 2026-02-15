@@ -1,5 +1,8 @@
 import { Hero, Section, Card } from '../components/ui';
 
+// Prayer times data (generated at build time)
+import prayerTimesData from '../data/prayer_times.json';
+
 // Prayer space images
 import w11Image from '../assets/images/prayer/w11.jpg';
 import e51Image from '../assets/images/prayer/e51.jpeg';
@@ -58,14 +61,107 @@ export default function Prayer() {
         className="hero--prayer"
       />
 
+      {/* Daily Prayer Times */}
+      <Section>
+        <div className="container container--md">
+          <h2 className="text-3xl font-bold mb-6">Daily Prayer Times</h2>
+          <p className="text-muted mb-6">
+            Prayer times for {prayerTimesData.mosque?.name || 'MIT Musalla'}, sourced from{' '}
+            <a href="https://mawaqit.net/en/w/mit-musallah-cambridge" target="_blank" rel="noopener noreferrer" className="link">
+              MAWAQIT
+            </a>.
+            {prayerTimesData.status === 'placeholder' && (
+              <span className="text-warning"> Times are currently unavailable - showing placeholder data.</span>
+            )}
+          </p>
+
+          <table className="prayer-times mb-8">
+            <thead>
+              <tr>
+                <th>Prayer</th>
+                <th>Adhan</th>
+                <th>Iqama</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Fajr</td>
+                <td>{prayerTimesData.times?.fajr || '--:--'}</td>
+                <td>{prayerTimesData.iqama?.fajr || '--:--'}</td>
+              </tr>
+              <tr>
+                <td>Sunrise</td>
+                <td>{prayerTimesData.times?.sunrise || '--:--'}</td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td>Dhuhr</td>
+                <td>{prayerTimesData.times?.dhuhr || '--:--'}</td>
+                <td>{prayerTimesData.iqama?.dhuhr || '--:--'}</td>
+              </tr>
+              <tr>
+                <td>Asr</td>
+                <td>{prayerTimesData.times?.asr || '--:--'}</td>
+                <td>{prayerTimesData.iqama?.asr || '--:--'}</td>
+              </tr>
+              <tr>
+                <td>Maghrib</td>
+                <td>{prayerTimesData.times?.maghrib || '--:--'}</td>
+                <td>{prayerTimesData.iqama?.maghrib || '--:--'}</td>
+              </tr>
+              <tr>
+                <td>Isha</td>
+                <td>{prayerTimesData.times?.isha || '--:--'}</td>
+                <td>{prayerTimesData.iqama?.isha || '--:--'}</td>
+              </tr>
+            </tbody>
+          </table>
+
+          {prayerTimesData.lastUpdated && (
+            <p className="text-sm text-muted">
+              Last updated: {new Date(prayerTimesData.lastUpdated).toLocaleDateString('en-US', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+              })}
+            </p>
+          )}
+
+          <div className="info-box mt-6">
+            <h3 className="info-box__title">Additional Resources</h3>
+            <p className="info-box__text mb-4">
+              For prayer time calculations when traveling or for verification:
+            </p>
+            <ul className="list-disc">
+              <li>
+                <a href="https://mawaqit.net/en/w/mit-musallah-cambridge" target="_blank" rel="noopener noreferrer" className="link">
+                  MAWAQIT - MIT Musalla Prayer Times
+                </a>
+              </li>
+              <li>
+                <a href="https://www.islamicfinder.org/prayer-times/city/cambridge-massachusetts/" target="_blank" rel="noopener noreferrer" className="link">
+                  IslamicFinder - Cambridge Prayer Times
+                </a>
+              </li>
+              <li>
+                <a href="https://www.muslimpro.com/" target="_blank" rel="noopener noreferrer" className="link">
+                  Muslim Pro App
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </Section>
+
       {/* Jumu'ah Section */}
-      <Section id="jumuah">
+      <Section id="jumuah" variant="light">
         <div className="container container--md">
           <h2 className="text-3xl font-bold mb-6">Jumu'ah Prayer</h2>
           <div className="info-box mb-8">
             <h3 className="info-box__title">Every Friday</h3>
             <p className="info-box__text">
-              <strong>Khutbah:</strong> 1:15 PM EST<br />
+              <strong>Khutbah:</strong> {prayerTimesData.jumua || '1:15 PM'} EST<br />
               <strong>Location:</strong> MIT Musalla (Room W11-110)
             </p>
           </div>
@@ -82,7 +178,7 @@ export default function Prayer() {
       </Section>
 
       {/* Prayer Spaces Section */}
-      <Section variant="light">
+      <Section>
         <div className="container">
           <Section.Header
             title="Prayer Spaces on Campus"
@@ -169,33 +265,6 @@ export default function Prayer() {
                 in shared restrooms.
               </p>
             </div>
-          </div>
-        </div>
-      </Section>
-
-      {/* Daily Prayer Times */}
-      <Section>
-        <div className="container container--md">
-          <h2 className="text-3xl font-bold mb-6">Daily Prayer Times</h2>
-          <p className="text-muted mb-6">
-            For accurate daily prayer times in Cambridge, MA, we recommend using
-            a prayer time calculator or app. Prayer times change throughout the year
-            based on the sun's position.
-          </p>
-          <div className="info-box">
-            <h3 className="info-box__title">Recommended Resources</h3>
-            <ul className="list-disc">
-              <li>
-                <a href="https://www.islamicfinder.org/prayer-times/city/cambridge-massachusetts/" target="_blank" rel="noopener noreferrer" className="link">
-                  IslamicFinder - Cambridge Prayer Times
-                </a>
-              </li>
-              <li>
-                <a href="https://www.muslimpro.com/" target="_blank" rel="noopener noreferrer" className="link">
-                  Muslim Pro App
-                </a>
-              </li>
-            </ul>
           </div>
         </div>
       </Section>

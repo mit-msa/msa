@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:with-times": "python3 scripts/fetch_prayer_times.py && vite build",
+    "fetch-times": "python3 scripts/fetch_prayer_times.py",
     "lint": "eslint .",
     "preview": "vite preview"
   },

@@ -1,0 +1,55 @@
+name: Update Prayer Times and Deploy
+
+on:
+  schedule:
+    # Run daily at 2 AM EST (7 AM UTC)
+    - cron: '0 7 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Python dependencies
+        run: pip install mawaqit python-dotenv
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Fetch prayer times from Mawaqit
+        env:
+          MAWAQIT_USERNAME: ${{ secrets.MAWAQIT_USERNAME }}
+          MAWAQIT_PASSWORD: ${{ secrets.MAWAQIT_PASSWORD }}
+          MAWAQIT_MOSQUE_UUID: ${{ secrets.MAWAQIT_MOSQUE_UUID }}
+        run: python scripts/fetch_prayer_times.py
+
+      - name: Build static site
+        run: npm run build
+
+      - name: Deploy to Athena
+        env:
+          ATHENA_USER: ${{ secrets.ATHENA_USER }}
+          ATHENA_HOST: ${{ secrets.ATHENA_HOST }}
+          ATHENA_PATH: ${{ secrets.ATHENA_PATH }}
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H $ATHENA_HOST >> ~/.ssh/known_hosts
+          rsync -avz --delete dist/ $ATHENA_USER@$ATHENA_HOST:$ATHENA_PATH
