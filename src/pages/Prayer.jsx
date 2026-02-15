@@ -181,7 +181,7 @@ export default function Prayer() {
           <div className="info-box mb-8">
             <h3 className="info-box__title">Every Friday</h3>
             <p className="info-box__text">
-              <strong>Khutbah:</strong> {formatTime12Hour(prayerTimesData.jumua) || '1:15 PM'} EST<br />
+              <strong>Khutbah:</strong> {formatTime12Hour(prayerTimesData.jumua || '13:15')} EST<br />
               <strong>Location:</strong> MIT Musalla (Room W11-110)
             </p>
           </div>
