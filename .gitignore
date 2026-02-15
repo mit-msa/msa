@@ -26,7 +26,3 @@ dist-ssr
 .env
 .env.local
 .env.*.local
-
-# SSH
-athena_ssh
-athena_ssh.pub
