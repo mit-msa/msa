@@ -36,6 +36,8 @@ jobs:
           MAWAQIT_USERNAME: ${{ secrets.MAWAQIT_USERNAME }}
           MAWAQIT_PASSWORD: ${{ secrets.MAWAQIT_PASSWORD }}
           MAWAQIT_MOSQUE_UUID: ${{ secrets.MAWAQIT_MOSQUE_UUID }}
+          # Set to "true" to fail deployment if fetch fails with valid credentials
+          # FAIL_ON_FETCH_ERROR: "true"
         run: python scripts/fetch_prayer_times.py
 
       - name: Build static site

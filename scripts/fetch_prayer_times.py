@@ -205,6 +205,16 @@ async def main():
         data = format_prayer_data(raw_data)
         print("Successfully fetched prayer times!")
     else:
+        # Check if credentials were provided - if so, fail in CI to avoid deploying stale data
+        has_credentials = (CONFIG["username"] and CONFIG["password"]) or CONFIG["api_token"]
+        fail_on_error = os.environ.get("FAIL_ON_FETCH_ERROR", "false").lower() == "true"
+        
+        if has_credentials and fail_on_error:
+            print("ERROR: Failed to fetch prayer times with valid credentials.")
+            print("Refusing to deploy placeholder data. Check Mawaqit API status.")
+            import sys
+            sys.exit(1)
+        
         print("Using placeholder data. Configure Mawaqit credentials to fetch real times.")
         data = create_placeholder_data()
     
