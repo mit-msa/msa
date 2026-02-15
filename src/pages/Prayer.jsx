@@ -31,6 +31,29 @@ function formatTime12Hour(time24) {
 }
 
 /**
+ * Formats a date string for display, handling invalid dates gracefully
+ * @param {string} dateString - ISO date string
+ * @returns {string} Formatted date string or fallback text
+ */
+function formatLastUpdated(dateString) {
+  if (!dateString) return 'Recently';
+  
+  const date = new Date(dateString);
+  const isValidDate = !isNaN(date.getTime());
+  
+  if (!isValidDate) {
+    return 'Recently';
+  }
+  
+  return date.toLocaleDateString('en-US', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+}
+
+/**
  * Prayer page - Prayer spaces and times information
  */
 export default function Prayer() {
@@ -139,12 +162,7 @@ export default function Prayer() {
 
           {prayerTimesData.lastUpdated && (
             <p className="text-sm text-muted">
-              Last updated: {new Date(prayerTimesData.lastUpdated).toLocaleDateString('en-US', {
-                weekday: 'long',
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-              })}
+              Last updated: {formatLastUpdated(prayerTimesData.lastUpdated)}
             </p>
           )}
 
