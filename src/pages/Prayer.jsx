@@ -36,7 +36,7 @@ function formatTime12Hour(time24) {
  * @returns {string} Formatted date string or fallback text
  */
 function formatLastUpdated(dateString) {
-  if (!dateString) return null;
+  if (!dateString) return 'Recently';
   
   const date = new Date(dateString);
   const isValidDate = !isNaN(date.getTime());
