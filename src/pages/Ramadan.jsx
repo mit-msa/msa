@@ -4,8 +4,7 @@ import { Hero, Section } from '../components/ui';
  * Ramadan page - Information and guest registration
  */
 export default function Ramadan() {
-  const guestRegistrationUrl =
-    'https://script.google.com/macros/s/AKfycbzeVaz4D47Mje4CD1XnDzNTEFHYHAH_vUPjllq_W4XV8ycJ1sQ4bN45UrEu7f-zPBR1Fw/exec';
+  const googleFormURL = "https://docs.google.com/forms/d/e/1FAIpQLSftR0kGo2YbVCq4pd6a8RJWne7XFhW9D9L9dS-IDcPihtaE7g/viewform?embedded=true"
 
   return (
     <>
@@ -17,17 +16,19 @@ export default function Ramadan() {
 
       {/* Guest Registration Section */}
       <Section>
-        <div className="container">
+        <div className="container" style={{ display: 'flex', justifyContent: 'center' }}>
           <iframe
-            src={guestRegistrationUrl}
-            title="Ramadan Guest Registration"
+            src={googleFormURL}
             style={{
               width: '100%',
-              height: '80vh',
-              border: 'none',
-              borderRadius: '8px',
+              maxWidth: '640px',
+              height: '2279px',
+              border: 'none'
             }}
-          />
+            title="Ramadan Guest Registration Form"
+          >
+            Loading…
+          </iframe>
         </div>
       </Section>
     </>
