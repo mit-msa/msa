@@ -58,8 +58,52 @@ export default function Prayer() {
         className="hero--prayer"
       />
 
+      {/* Daily Prayer Times */}
+      <Section>
+        <div className="container container--md">
+          <h2 className="text-3xl font-bold mb-6">Daily Prayer Times</h2>
+          <p className="text-muted mb-6">
+            View the current prayer times for MIT Musalla, including Adhan and Iqama times for all daily prayers.
+          </p>
+
+          <div className="card card--bordered p-6 text-center mb-8">
+            <h3 className="card__title mb-4">MIT Musalla Prayer Times</h3>
+            <p className="text-muted mb-6">
+              MAWAQIT provides accurate, up-to-date prayer times including Adhan and Iqama schedules.
+            </p>
+            <a
+              href="https://mawaqit.net/en/mit-musallah-cambridge-02139-united-states-1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn--primary btn--lg"
+            >
+              View Prayer Times on MAWAQIT
+            </a>
+          </div>
+
+          <div className="info-box">
+            <h3 className="info-box__title">Additional Resources</h3>
+            <p className="info-box__text mb-4">
+              For prayer time calculations when traveling or for verification:
+            </p>
+            <ul className="list-disc">
+              <li>
+                <a href="https://www.islamicfinder.org/prayer-times/city/cambridge-massachusetts/" target="_blank" rel="noopener noreferrer" className="link">
+                  IslamicFinder - Cambridge Prayer Times
+                </a>
+              </li>
+              <li>
+                <a href="https://www.muslimpro.com/" target="_blank" rel="noopener noreferrer" className="link">
+                  Muslim Pro App
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </Section>
+
       {/* Jumu'ah Section */}
-      <Section id="jumuah">
+      <Section id="jumuah" variant="light">
         <div className="container container--md">
           <h2 className="text-3xl font-bold mb-6">Jumu'ah Prayer</h2>
           <div className="info-box mb-8">
@@ -82,7 +126,7 @@ export default function Prayer() {
       </Section>
 
       {/* Prayer Spaces Section */}
-      <Section variant="light">
+      <Section>
         <div className="container">
           <Section.Header
             title="Prayer Spaces on Campus"
@@ -169,33 +213,6 @@ export default function Prayer() {
                 in shared restrooms.
               </p>
             </div>
-          </div>
-        </div>
-      </Section>
-
-      {/* Daily Prayer Times */}
-      <Section>
-        <div className="container container--md">
-          <h2 className="text-3xl font-bold mb-6">Daily Prayer Times</h2>
-          <p className="text-muted mb-6">
-            For accurate daily prayer times in Cambridge, MA, we recommend using
-            a prayer time calculator or app. Prayer times change throughout the year
-            based on the sun's position.
-          </p>
-          <div className="info-box">
-            <h3 className="info-box__title">Recommended Resources</h3>
-            <ul className="list-disc">
-              <li>
-                <a href="https://www.islamicfinder.org/prayer-times/city/cambridge-massachusetts/" target="_blank" rel="noopener noreferrer" className="link">
-                  IslamicFinder - Cambridge Prayer Times
-                </a>
-              </li>
-              <li>
-                <a href="https://www.muslimpro.com/" target="_blank" rel="noopener noreferrer" className="link">
-                  Muslim Pro App
-                </a>
-              </li>
-            </ul>
           </div>
         </div>
       </Section>

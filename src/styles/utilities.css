@@ -21,6 +21,9 @@
 .text-secondary { color: var(--color-secondary-600); }
 .text-muted { color: var(--color-neutral-600); }
 .text-white { color: var(--color-neutral-0); }
+.text-warning { color: var(--color-warning); }
+.text-error { color: var(--color-error); }
+.text-success { color: var(--color-success); }
 
 /* ==========================================================================
    Background Colors
