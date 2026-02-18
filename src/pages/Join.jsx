@@ -32,7 +32,7 @@ export default function Join() {
             </p>
             {/* Replace this href with your actual mailing list signup link */}
             <Button
-              href="mailto:msa-exec@mit.edu?subject=Mailing%20List%20Signup&body=Please%20add%20me%20to%20the%20MIT%20MSA%20mailing%20list."
+              href="mailto:msa-webmaster@mit.edu?subject=Mailing%20List%20Signup&body=Please%20add%20me%20to%20the%20MIT%20MSA%20mailing%20list.%0D%0AMy%20affiliation%20with%20MIT%20is%3A%20(undergrad%20%2B%20Class%20year%2C%20grad%2C%20postdoc%20etc.)."
               variant="secondary"
               size="lg"
             >
