@@ -130,6 +130,16 @@ export default function Footer() {
           <p className="footer__copyright">
             A recognized student organization at MIT.
           </p>
+          <p className="footer__copyright">
+            <a
+              href="https://accessibility.mit.edu/"
+              className="footer__link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              MIT Accessibility
+            </a>
+          </p>
         </div>
       </div>
     </footer>
