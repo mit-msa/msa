@@ -12,6 +12,11 @@ import photo8 from '../assets/images/FreshmanOutingForWebsite/IMG_0619.PNG';
 import photo9 from '../assets/images/FreshmanOutingForWebsite/IMG_2336.JPEG';
 import photo10 from '../assets/images/FreshmanOutingForWebsite/IMG_2347.JPEG';
 
+const eid26ImageModules = import.meta.glob('../assets/images/Eid 26/*.{JPG,JPEG,PNG,jpg,jpeg,png}', {
+  eager: true,
+  import: 'default',
+});
+
 const freshmanOutingPhotos = [
   { src: photo1, alt: 'Freshman outing group photo' },
   { src: photo2, alt: 'Freshman outing conversation and activities' },
@@ -25,6 +30,13 @@ const freshmanOutingPhotos = [
   { src: photo10, alt: 'Freshman outing closing group photo' },
 ];
 
+const eid26Photos = Object.entries(eid26ImageModules)
+  .sort(([pathA], [pathB]) => pathA.localeCompare(pathB, undefined, { numeric: true }))
+  .map(([, src], index) => ({
+    src,
+    alt: `Eid 26 community event photo ${index + 1}`,
+  }));
+
 const communityEvents = [
   {
     id: 'freshman-outing-2026',
@@ -36,13 +48,23 @@ const communityEvents = [
     location: 'Boston Museum of Science',
     photos: freshmanOutingPhotos,
   },
+  {
+    id: 'eid-26-2026',
+    title: 'Eid 26',
+    date: 'Spring 2026',
+    tag: 'Community Event',
+    summary:
+      'An Eid celebration that brought the MIT MSA community together for reflection, food, and fellowship during Spring 2026.',
+    location: 'Lobdell Hall (MIT)',
+    photos: eid26Photos,
+  },
 ];
 
 /**
  * Community activities page showcasing moments from MSA events.
  */
 export default function CommunityActivities() {
-  const [expandedEventId, setExpandedEventId] = useState(communityEvents[0]?.id);
+  const [expandedEventId, setExpandedEventId] = useState(null);
 
   const toggleEvent = (eventId) => {
     setExpandedEventId((currentId) => (currentId === eventId ? null : eventId));

@@ -1,3 +1,4 @@
+import { createElement } from 'react';
 import { Link } from 'react-router-dom';
 
 /**
@@ -57,10 +58,10 @@ Card.Content = function CardContent({ children, className = '', ...props }) {
 };
 
 Card.Title = function CardTitle({ children, className = '', as: Tag = 'h3', ...props }) {
-  return (
-    <Tag className={`card__title ${className}`} {...props}>
-      {children}
-    </Tag>
+  return createElement(
+    Tag,
+    { className: `card__title ${className}`, ...props },
+    children
   );
 };
 

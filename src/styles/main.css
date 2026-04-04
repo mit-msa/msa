@@ -409,6 +409,7 @@
 .event-card__panel {
   display: grid;
   grid-template-rows: 0fr;
+  overflow: hidden;
   transition: grid-template-rows var(--transition-base);
 }
 
@@ -419,6 +420,10 @@
 .event-card__panel > .outing-gallery {
   min-height: 0;
   overflow: hidden;
+  padding: 0;
+}
+
+.event-card__panel--open > .outing-gallery {
   padding: 0 var(--space-6) var(--space-6);
 }
 
@@ -430,9 +435,11 @@
 
 .outing-gallery__item {
   position: relative;
+  margin: 0;
   overflow: hidden;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
+  aspect-ratio: 3 / 2;
   background: linear-gradient(
     135deg,
     var(--color-primary-100) 0%,
@@ -459,8 +466,8 @@
 
 .outing-gallery__image {
   width: 100%;
-  height: auto;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
   display: block;
   transform: scale(1);
   transition: transform var(--transition-slow);
@@ -486,7 +493,7 @@
     padding: var(--space-8);
   }
 
-  .event-card__panel > .outing-gallery {
+  .event-card__panel--open > .outing-gallery {
     padding: 0 var(--space-8) var(--space-8);
   }
 
