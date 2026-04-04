@@ -41,6 +41,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/community-activities" className="footer__link">
+                  Community Activities
+                </Link>
+              </li>
+              <li>
                 <Link to="/leadership" className="footer__link">
                   Leadership
                 </Link>
@@ -63,7 +68,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://calendar.mit.edu/group/muslim_students_association"
+                  href="https://calendar.google.com/calendar/embed?src=mit.msa.docs%40gmail.com&ctz=America%2FNew_York"
                   className="footer__link"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -99,25 +104,6 @@ export default function Footer() {
                   <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
                 </svg>
               </a>
-              <a
-                href="mailto:msa-exec@mit.edu"
-                className="footer__social-link"
-                aria-label="Email"
-              >
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                  <polyline points="22,6 12,13 2,6" />
-                </svg>
-              </a>
             </div>
           </div>
         </div>
@@ -129,6 +115,16 @@ export default function Footer() {
           </p>
           <p className="footer__copyright">
             A recognized student organization at MIT.
+          </p>
+          <p className="footer__copyright">
+            <a
+              href="https://accessibility.mit.edu/"
+              className="footer__link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              MIT Accessibility
+            </a>
           </p>
         </div>
       </div>

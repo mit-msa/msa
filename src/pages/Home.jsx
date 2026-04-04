@@ -191,7 +191,7 @@ export default function Home() {
                   Regular gatherings, iftars during Ramadan, educational
                   programs, and social events.
                 </Card.Text>
-                <Link to="/about#events" className="link mt-4 block">
+                <Link to="/community-activities" className="link mt-4 block">
                   See our events
                 </Link>
               </Card.Content>
@@ -212,9 +212,13 @@ export default function Home() {
               Join our mailing list to receive updates about events, prayer
               times, and community news.
             </p>
-            <Button to="/join" variant="secondary" size="lg">
-              Join Our Mailing List
-            </Button>
+            <p className="cta-section__text">
+              Email{' '}
+              <a className="link text-white" href="mailto:msa-webmaster@mit.edu">
+                msa-webmaster@mit.edu
+              </a>{' '}
+              to join the mailing list.
+            </p>
           </div>
         </div>
       </Section>
