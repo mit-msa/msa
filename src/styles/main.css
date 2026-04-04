@@ -235,7 +235,8 @@
 }
 
 .cta-section__text {
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
   opacity: 0.95;
   max-width: 500px;
   margin: 0 auto var(--space-5);
