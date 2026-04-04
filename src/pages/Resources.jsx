@@ -111,6 +111,104 @@ export default function Resources() {
     { name: 'IslamicFinder', url: 'https://www.islamicfinder.org', description: 'Prayer times and Qibla direction' },
   ];
 
+  const islamicResourceCategories = [
+    {
+      category: 'Muslim Mental Health Resources',
+      links: [
+        { name: 'Khalil Center', url: 'https://khalilcenter.com/' },
+        { name: 'Family Youth Institute', url: 'https://www.thefyi.org/' },
+        { name: 'Naseeha', url: 'https://naseeha.org/' },
+      ],
+    },
+    {
+      category: 'Quran Resources',
+      links: [
+        { name: 'Quran.com', url: 'https://quran.com/' },
+        { name: 'Tanzeel.com', url: 'https://www.tanzeel.com/' },
+      ],
+    },
+    {
+      category: 'Quran Exegesis Resources',
+      links: [
+        { name: 'Ibn Katheer (audio)', url: 'https://www.salafisounds.com/tafsir-ibn-kathir-by-abu-hakeem-bilal-davis/' },
+        { name: 'Al-Mawdudi', url: 'http://www.englishtafsir.com/' },
+        { name: 'In the Shade of the Quran', url: 'https://alhamdolillah.com/book/in-the-shade-of-the-quran-english-sayyid-qutb-shaheed/' },
+      ],
+    },
+    {
+      category: 'Hadith Resources',
+      links: [
+        { name: 'Sunnah.com', url: 'https://sunnah.com/' },
+        { name: 'Forty Hadith Nawawi', url: 'https://d1.islamhouse.com/data/en/ih_books/single2/en-hadith-nawawy-sahih.pdf' },
+      ],
+    },
+    {
+      category: 'Seerah / Life Story of Prophet Muhammad',
+      links: [
+        { name: 'Meeting Muhammad (videos)', url: 'https://www.youtube.com/playlist?app=desktop&list=PLQ02IYL5pmhHvZ02LKQVeey8H-2XBKMGb' },
+        { name: 'Seerah by Yasir Qadhi (videos)', url: 'https://www.youtube.com/watch?v=95K8HQbbeS0&list=PLAEA99D24CA2F9A8F' },
+        { name: 'Men and Women Around the Messenger', url: 'https://www.kalamullah.com/Books/Men%20And%20Women%20Around%20the%20Messenger.pdf' },
+      ],
+    },
+    {
+      category: 'Theology',
+      links: [
+        { name: 'Al-Sanusi', url: 'https://sunnianswers.files.wordpress.com/2011/08/sanusicreed-abuadam.pdf' },
+        { name: 'Al-Hanbali\'s The Keys to Paradise', url: 'https://maktabahassunnahblog.files.wordpress.com/2015/10/the-key-to-paradise.pdf' },
+        { name: 'Dehlevi\'s Perfection of Faith', url: 'https://archive.org/details/PerfectionOfFaith/page/n15/mode/2up' },
+      ],
+    },
+    {
+      category: 'Women',
+      links: [
+        { name: 'Female Scholars', url: 'https://muslimmatters.org/2021/03/15/two-questions-about-the-dictionary-of-female-scholars/' },
+        { name: 'Upheld by Allah (videos)', url: 'https://yaqeeninstitute.org/yaqeen-institute/trailer-upheld-by-allah-women-in-the-quran' },
+        { name: 'Yasmin Mogahed (video)', url: 'https://www.youtube.com/watch?v=m5Wt_h7_WPQ' },
+        { name: 'Female Companions', url: 'https://ayeina.com/stories-of-sahabiyat/' },
+        { name: 'Islamic Ruling on Hijab', url: 'https://yaqeeninstitute.org/read/paper/is-hijab-religious-or-cultural-how-islamic-rulings-are-formed' },
+      ],
+    },
+    {
+      category: 'Purification',
+      links: [
+        { name: 'Purification of the Heart', url: 'https://data.nur.nu/Kutub/English/Hamza-Yusuf_Purification-of-the-Heart.pdf' },
+        { name: 'Heart Therapy by Albarghouthi', url: 'http://www.kalamullah.com/Books/Heart%20Therapy.pdf' },
+      ],
+    },
+    {
+      category: 'General Topics',
+      links: [
+        { name: 'About Islam', url: 'https://aboutislam.net/' },
+        { name: 'Yaqeen Institute', url: 'https://yaqeeninstitute.org/' },
+        { name: 'Muslim Matters', url: 'http://muslimmatters.org/' },
+      ],
+    },
+    {
+      category: 'Questions about Islam and Muslims',
+      links: [
+        { name: 'ING - Answers to FAQs about Islam and Muslims', url: 'https://ing.org/resources/for-all-groups/answers-to-frequently-asked-questions/answers-to-frequently-asked-questions-about-islam-and-muslims/' },
+        { name: 'Towards Eternity (videos)', url: 'https://www.youtube.com/@TowardsEternity/videos' },
+        { name: 'Institute of Social Policy and Understanding', url: 'https://www.ispu.org/' },
+        { name: 'American Muslims: Facts vs. Fiction', url: 'https://www.upf.tv/films/american-muslim-facts/' },
+      ],
+    },
+    {
+      category: 'Ramadan and Eid',
+      links: [
+        { name: 'Ramadan', url: 'https://www.whyislam.org/ramadan/' },
+        { name: 'Eid-al-Adha', url: 'https://www.whyislam.org/eidaladha/' },
+      ],
+    },
+    {
+      category: 'Just for Fun',
+      links: [
+        { name: 'Fit for Allah', url: 'https://www.instagram.com/zainab_fitforallah/?hl=en' },
+        { name: 'Aida Azlin', url: 'https://www.aidaazlin.com/' },
+        { name: 'Deen and Chai', url: 'https://www.youtube.com/channel/UCiTGEEhMAaBu6LPuPXsDYYQ/featured' },
+      ],
+    },
+  ];
+
   return (
     <>
       <Hero
@@ -206,6 +304,41 @@ export default function Resources() {
                   <p className="card__text">{link.description}</p>
                 </div>
               </a>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* Islamic learning and deen resources */}
+      <Section variant="light" id="islamic-resources">
+        <div className="container">
+          <h2 className="text-3xl font-bold mb-6 text-center">Deen Exploration</h2>
+          <p className="text-muted mb-8 text-center max-w-md mx-auto">
+            Curated Islamic learning, reflection, and wellness resources for your spiritual journey.
+          </p>
+          <div className="grid grid--2">
+            {islamicResourceCategories.map((group) => (
+              <Card key={group.category} variant="bordered">
+                <Card.Content>
+                  <Card.Title as="h3" className="text-xl mb-4">
+                    {group.category}
+                  </Card.Title>
+                  <ul className="resource-links-list m-0">
+                    {group.links.map((resource) => (
+                      <li key={resource.name} className="resource-links-list__item">
+                        <a
+                          href={resource.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="resource-links-list__link"
+                        >
+                          {resource.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </Card.Content>
+              </Card>
             ))}
           </div>
         </div>

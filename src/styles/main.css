@@ -512,3 +512,35 @@
     opacity: 1;
   }
 }
+
+/* Islamic resources list */
+.resource-links-list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.resource-links-list__item {
+  margin: 0;
+}
+
+.resource-links-list__link {
+  display: block;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-neutral-200);
+  border-radius: var(--radius-md);
+  background-color: var(--color-neutral-50);
+  color: var(--color-primary-700);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.resource-links-list__link:hover,
+.resource-links-list__link:focus-visible {
+  border-color: var(--color-primary-300);
+  background-color: var(--color-primary-50);
+  color: var(--color-primary-800);
+}
