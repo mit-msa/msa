@@ -3,7 +3,7 @@ import { Layout } from './components/layout';
 import {
   Home,
   Prayer,
-  Ramadan,
+  // Ramadan,
   CommunityActivities,
   Resources,
   Leadership,
@@ -22,7 +22,7 @@ export default function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="prayer" element={<Prayer />} />
-        <Route path="ramadan" element={<Ramadan />} />
+        {/* <Route path="ramadan" element={<Ramadan />} /> */}
         <Route path="community-activities" element={<CommunityActivities />} />
         <Route path="resources" element={<Resources />} />
         <Route path="leadership" element={<Leadership />} />
