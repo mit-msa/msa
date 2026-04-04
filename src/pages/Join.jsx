@@ -1,4 +1,4 @@
-import { Hero, Section, Button } from '../components/ui';
+import { Hero, Section } from '../components/ui';
 import { InstagramIcon, MailIcon } from '../components/ui/Icons';
 
 /**
@@ -28,16 +28,12 @@ export default function Join() {
           <div className="cta-section">
             <h3 className="cta-section__title">Subscribe to Our Mailing List</h3>
             <p className="cta-section__text">
-              Click below to join our mailing list and stay connected with the MIT Muslim community.
+              Email{' '}
+              <a className="link text-white" href="mailto:msa-webmaster@mit.edu">
+                msa-webmaster@mit.edu
+              </a>{' '}
+              to join the mailing list and stay connected with the MIT Muslim community.
             </p>
-            {/* Replace this href with your actual mailing list signup link */}
-            <Button
-              href="mailto:msa-exec@mit.edu?subject=Mailing%20List%20Signup&body=Please%20add%20me%20to%20the%20MIT%20MSA%20mailing%20list."
-              variant="secondary"
-              size="lg"
-            >
-              Join Mailing List
-            </Button>
           </div>
         </div>
       </Section>
