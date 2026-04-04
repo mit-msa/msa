@@ -41,6 +41,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/community-activities" className="footer__link">
+                  Community Activities
+                </Link>
+              </li>
+              <li>
                 <Link to="/leadership" className="footer__link">
                   Leadership
                 </Link>

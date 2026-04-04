@@ -13,6 +13,7 @@ export default function Header() {
     { to: '/', label: 'Home' },
     { to: '/prayer', label: 'Prayer' },
     { to: '/ramadan', label: 'Ramadan' },
+    { to: '/community-activities', label: 'Community Activities' },
     { to: '/resources', label: 'Resources' },
     { to: '/leadership', label: 'Leadership' },
   ];
