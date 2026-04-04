@@ -107,7 +107,7 @@ export default function Resources() {
 
   const usefulLinks = [
     { name: 'MIT Chaplaincy', url: 'https://studentlife.mit.edu/rl', description: 'MIT Religious Life office' },
-    { name: 'MIT Events Calendar', url: 'https://calendar.mit.edu/group/muslim_students_association', description: 'Official MIT MSA events' },
+    { name: 'MIT Events Calendar', url: 'https://calendar.google.com/calendar/embed?src=mit.msa.docs%40gmail.com&ctz=America%2FNew_York', description: 'Official MIT MSA events' },
     { name: 'IslamicFinder', url: 'https://www.islamicfinder.org', description: 'Prayer times and Qibla direction' },
   ];
 

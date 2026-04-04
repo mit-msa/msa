@@ -68,7 +68,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://calendar.mit.edu/group/muslim_students_association"
+                  href="https://calendar.google.com/calendar/embed?src=mit.msa.docs%40gmail.com&ctz=America%2FNew_York"
                   className="footer__link"
                   target="_blank"
                   rel="noopener noreferrer"
