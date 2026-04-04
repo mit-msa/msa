@@ -33,7 +33,7 @@ const communityEvents = [
     tag: 'Welcome Event',
     summary:
       'A day of connection, reflection, and fun that helps incoming students feel at home in the MIT MSA community.',
-    location: 'Boston/Cambridge Area',
+    location: 'Boston Museum of Science',
     photos: freshmanOutingPhotos,
   },
 ];
