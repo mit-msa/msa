@@ -61,9 +61,7 @@ export default function CommunityActivities() {
             <span className="badge badge--secondary">Community Timeline</span>
             <h2 className="community-activities__title">Event Galleries</h2>
             <p className="community-activities__text">
-              Add new events by appending one object to the event list in this
-              page, then attach photos to instantly generate another expandable
-              gallery card.
+              Get a glimpse into the vibrant life of the MIT MSA community through our event galleries. Each gallery captures the spirit of our gatherings, from welcoming new members to celebrating milestones together. Click on each event to explore the photos and relive the moments that make our community special.
             </p>
           </div>
 
