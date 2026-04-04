@@ -191,7 +191,7 @@ export default function Home() {
                   Regular gatherings, iftars during Ramadan, educational
                   programs, and social events.
                 </Card.Text>
-                <Link to="/about#events" className="link mt-4 block">
+                <Link to="/community-activities" className="link mt-4 block">
                   See our events
                 </Link>
               </Card.Content>
