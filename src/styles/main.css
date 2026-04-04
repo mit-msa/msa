@@ -188,15 +188,10 @@
   position: relative;
   text-align: center;
   padding: var(--space-8) var(--space-6) var(--space-10);
-  background: linear-gradient(
-    180deg,
-    var(--color-primary-600) 0%,
-    var(--color-primary-500) 30%,
-    var(--color-primary-300) 55%,
-    var(--color-primary-100) 80%,
-    var(--color-neutral-50) 100%
-  );
-  color: var(--color-neutral-0);
+  background-color: #e7efe4;
+  color: #2f4332;
+  border: 1px solid #c8d5c3;
+  box-shadow: 0 6px 18px rgb(39 56 42 / 0.08);
   border-radius: var(--radius-lg);
 }
 
@@ -213,11 +208,11 @@
   inset: -50%;
   width: 200%;
   height: 200%;
-  opacity: 0.1;
+  opacity: 0.16;
   /* 8-pointed Islamic star pattern (Khatam) */
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='1'%3E%3C!-- 8-pointed star --%3E%3Cpath d='M40 8 L47 33 L72 40 L47 47 L40 72 L33 47 L8 40 L33 33 Z'/%3E%3Cpath d='M40 8 L47 33 L72 40 L47 47 L40 72 L33 47 L8 40 L33 33 Z' transform='rotate(45 40 40)'/%3E%3C!-- Connecting lines to create tessellation --%3E%3Cpath d='M8 40 L0 40 M72 40 L80 40 M40 8 L40 0 M40 72 L40 80'/%3E%3Cpath d='M33 33 L0 0 M47 33 L80 0 M47 47 L80 80 M33 47 L0 80' stroke-width='0.5'/%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%238ba287' stroke-width='1'%3E%3C!-- 8-pointed star --%3E%3Cpath d='M40 8 L47 33 L72 40 L47 47 L40 72 L33 47 L8 40 L33 33 Z'/%3E%3Cpath d='M40 8 L47 33 L72 40 L47 47 L40 72 L33 47 L8 40 L33 33 Z' transform='rotate(45 40 40)'/%3E%3C!-- Connecting lines to create tessellation --%3E%3Cpath d='M8 40 L0 40 M72 40 L80 40 M40 8 L40 0 M40 72 L40 80'/%3E%3Cpath d='M33 33 L0 0 M47 33 L80 0 M47 47 L80 80 M33 47 L0 80' stroke-width='0.5'/%3E%3C/g%3E%3C/svg%3E");
   background-size: 80px 80px;
-  animation: pattern-waterfall 30s linear infinite;
+  animation: none;
 }
 
 /* Accessibility: respect user's motion preferences */
@@ -230,8 +225,9 @@
 .cta-section__title {
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-semibold);
+  color: #243a2a;
   margin-bottom: var(--space-2);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  text-shadow: none;
 }
 
 .cta-section__text {
@@ -240,7 +236,7 @@
   opacity: 0.95;
   max-width: 500px;
   margin: 0 auto var(--space-5);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  text-shadow: none;
 }
 
 /* Mailing list form */

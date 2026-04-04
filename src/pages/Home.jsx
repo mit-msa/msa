@@ -13,7 +13,7 @@ export default function Home() {
       {/* Hero Section */}
       <Hero
         typingTitles={["Welcome to the MIT MSA!", "As-salamu alaikum!"]}
-        subtitle="A close-knit and welcoming community dedicated to supporting Muslims at MIT in their practice of Islam and building bridges of understanding with people of all faiths."
+        subtitle="A close-knit and welcoming community dedicated to supporting Muslims at MIT in their practice of Islam and building bridges of understanding with people of all backgrounds."
         size="lg"
         className="hero--home"
         actions={
