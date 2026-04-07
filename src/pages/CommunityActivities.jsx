@@ -65,9 +65,45 @@ const communityEvents = [
  */
 export default function CommunityActivities() {
   const [expandedEventId, setExpandedEventId] = useState(null);
+  const [expandedPhoto, setExpandedPhoto] = useState(null);
+  const [zoomLevel, setZoomLevel] = useState(1);
 
   const toggleEvent = (eventId) => {
     setExpandedEventId((currentId) => (currentId === eventId ? null : eventId));
+  };
+
+  const togglePhoto = (photo) => {
+    setExpandedPhoto((currentPhoto) => {
+      const nextPhoto = currentPhoto?.src === photo.src ? null : photo;
+      setZoomLevel(1);
+      return nextPhoto;
+    });
+  };
+
+  const handlePhotoKeyDown = (event, photo) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      togglePhoto(photo);
+    }
+  };
+
+  const handleLightboxKeyDown = (event) => {
+    if (event.key === 'Enter' || event.key === ' ' || event.key === 'Escape') {
+      event.preventDefault();
+      setExpandedPhoto(null);
+      setZoomLevel(1);
+    }
+  };
+
+  const closeLightbox = () => {
+    setExpandedPhoto(null);
+    setZoomLevel(1);
+  };
+
+  const handleLightboxMouseDown = (event) => {
+    if (event.target === event.currentTarget) {
+      closeLightbox();
+    }
   };
 
   return (
@@ -88,7 +124,7 @@ export default function CommunityActivities() {
           </div>
 
           <div className="events-list" aria-label="Community event galleries">
-            {communityEvents.map((event, eventIndex) => {
+            {communityEvents.map((event) => {
               const isExpanded = expandedEventId === event.id;
 
               return (
@@ -145,7 +181,13 @@ export default function CommunityActivities() {
                             src={photo.src}
                             alt={photo.alt}
                             className="outing-gallery__image"
-                            loading={eventIndex === 0 && photoIndex < 4 ? 'eager' : 'lazy'}
+                            loading="lazy"
+                            decoding="async"
+                            onClick={() => togglePhoto(photo)}
+                            onKeyDown={(event) => handlePhotoKeyDown(event, photo)}
+                            role="button"
+                            tabIndex={0}
+                            aria-label={`Expand ${photo.alt}`}
                           />
                         </figure>
                       ))}
@@ -157,6 +199,44 @@ export default function CommunityActivities() {
           </div>
         </div>
       </Section>
+
+      {expandedPhoto && (
+        <div
+          className="gallery-lightbox"
+            onMouseDown={handleLightboxMouseDown}
+          onKeyDown={handleLightboxKeyDown}
+          role="button"
+          tabIndex={0}
+          aria-label="Close expanded image"
+        >
+          <div className="gallery-lightbox__viewport">
+            <img
+              src={expandedPhoto.src}
+              alt={expandedPhoto.alt}
+              className="gallery-lightbox__image"
+              loading="eager"
+              decoding="async"
+              style={{ width: `${zoomLevel * 100}%` }}
+            />
+          </div>
+          <div className="gallery-lightbox__zoom">
+            <label htmlFor="gallery-zoom" className="gallery-lightbox__zoom-label">
+              Zoom
+            </label>
+            <input
+              id="gallery-zoom"
+              type="range"
+              min="1"
+              max="2.5"
+              step="0.1"
+              value={zoomLevel}
+              onChange={(event) => setZoomLevel(Number(event.target.value))}
+              className="gallery-lightbox__zoom-slider"
+              aria-label="Zoom expanded image"
+            />
+          </div>
+        </div>
+      )}
     </>
   );
 }
