@@ -10,7 +10,6 @@ import photo6 from '../assets/images/FreshmanOutingForWebsite/IMG_0616.PNG';
 import photo7 from '../assets/images/FreshmanOutingForWebsite/IMG_0618.PNG';
 import photo8 from '../assets/images/FreshmanOutingForWebsite/IMG_0619.PNG';
 import photo9 from '../assets/images/FreshmanOutingForWebsite/IMG_2336.JPEG';
-import photo10 from '../assets/images/FreshmanOutingForWebsite/IMG_2347.JPEG';
 
 const eid26ImageModules = import.meta.glob('../assets/images/Eid 26/*.{JPG,JPEG,PNG,jpg,jpeg,png}', {
   eager: true,
@@ -27,7 +26,6 @@ const freshmanOutingPhotos = [
   { src: photo7, alt: 'Freshman outing social gathering' },
   { src: photo8, alt: 'Freshman outing shared meal and conversation' },
   { src: photo9, alt: 'Freshman outing walk and community bonding' },
-  { src: photo10, alt: 'Freshman outing closing group photo' },
 ];
 
 const eid26Photos = Object.entries(eid26ImageModules)
