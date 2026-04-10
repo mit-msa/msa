@@ -1,4 +1,5 @@
 export { default as Home } from './Home';
+export { default as About } from './About';
 export { default as Prayer } from './Prayer';
 export { default as Ramadan } from './Ramadan';
 export { default as CommunityActivities } from './CommunityActivities';
