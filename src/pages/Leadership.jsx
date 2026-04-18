@@ -1,5 +1,7 @@
 import { Hero, Section } from '../components/ui';
 import nadaImage from '../assets/images/nada.jpg';
+import hosseinImage from '../assets/images/hossein.png';
+import zehraImage from '../assets/images/zehra.jpeg';
 
 /**
  * Leadership page - Chaplain and team information
@@ -42,6 +44,67 @@ export default function Leadership() {
                 Sister Nada holds a BA in Psychology and an MA in Administration and Leadership,
                 and is pursuing a second MA in Islamic Leadership at Boston Islamic Seminary.
                 She has been awarded an Ijaza (authenticated certificate) in teaching Qur'anic reading.
+              </p>
+            </div>
+          </div>
+
+          <h2 className="text-3xl font-bold mb-6">Shia Muslim Chaplain</h2>
+
+          <div className="flex flex-col md:flex-row gap-12 mb-8">
+            <div className="flex-shrink-0 p-4">
+              <img
+                src={hosseinImage}
+                alt="Dr. Hossein Mosallaei"
+                className="w-48 h-48 object-cover rounded-lg shadow-md"
+              />
+            </div>
+            <div>
+              <h3 className="text-2xl font-semibold mb-2">Dr. Hossein Mosallaei</h3>
+              <p className="text-sm text-muted mb-4">Shia Muslim Chaplain</p>
+              <p className="text-muted mb-4">
+                Dr. Hossein Mosallaei is a Shia Muslim Chaplain at MIT and supports the Mobin
+                student group through the Office of Religious, Spiritual, and Ethical Life.
+              </p>
+              <p className="text-muted mb-4">
+                He has been actively involved with student groups at different universities and
+                has supported Shia student efforts at MIT since 2007 through Mobin and MSA under
+                ZEKR, helping organize Quran Study, Dua Kumayl, Nahj al-Balagha, Sahifa Sajjadiya,
+                and lecture series.
+              </p>
+              <p className="text-muted">
+                His vision is to support Muslim students in staying spiritually fulfilled while
+                they pursue their studies.
+              </p>
+            </div>
+          </div>
+
+          <h2 className="text-3xl font-bold mb-6">Associate Muslim Chaplain</h2>
+
+          <div className="flex flex-col md:flex-row gap-12 mb-8">
+            <div className="flex-shrink-0 p-4">
+              <img
+                src={zehraImage}
+                alt="Zehra Imam"
+                className="w-48 h-48 object-cover rounded-lg shadow-md"
+              />
+            </div>
+            <div>
+              <h3 className="text-2xl font-semibold mb-2">Zehra Imam</h3>
+              <p className="text-sm text-muted mb-4">Associate Muslim Chaplain</p>
+              <p className="text-muted mb-4">
+                Zehra Imam is an Associate Muslim Chaplain at MIT where she serves the campus
+                community by supporting students individually and through programs that create
+                spaces conducive to wellbeing and belonging.
+              </p>
+              <p className="text-muted mb-4">
+                She is the founder of Illuminated Cities, a creative arts organization that works
+                with communities impacted by systemic violence. She was a 2024 Fellow at Sacred
+                Writes, and her work has been published in The Intercept, The Nation, Mondoweiss,
+                and Harvard's Religion and Public Life blog.
+              </p>
+              <p className="text-muted">
+                Zehra has worked in education in the U.S., the Middle East, and South Asia and is
+                a graduate of Harvard Divinity School.
               </p>
             </div>
           </div>
