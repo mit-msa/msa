@@ -48,6 +48,15 @@ export default function Leadership() {
             </div>
           </div>
 
+          <div className="info-box mb-8">
+            <h3 className="info-box__title">Contact Information</h3>
+            <ul className="list-none">
+              <li><strong>Address:</strong> 40 Massachusetts Avenue, Building W11 - Room 011</li>
+              <li><strong>Phone:</strong> (617) 258-9285</li>
+              <li><strong>Email:</strong> <a href="mailto:mchnada@mit.edu" className="link">mchnada@mit.edu</a></li>
+            </ul>
+          </div>
+
           <h2 className="text-3xl font-bold mb-6">Shia Muslim Chaplain</h2>
 
           <div className="flex flex-col md:flex-row gap-12 mb-8">
@@ -78,6 +87,13 @@ export default function Leadership() {
                 they pursue their studies.
               </p>
             </div>
+          </div>
+
+          <div className="info-box mb-8">
+            <h3 className="info-box__title">Contact Information</h3>
+            <ul className="list-none">
+              <li><strong>Email:</strong> <a href="mailto:hosseinm@mit.edu" className="link">hosseinm@mit.edu</a></li>
+            </ul>
           </div>
 
           <h2 className="text-3xl font-bold mb-6">Associate Muslim Chaplain</h2>
@@ -120,6 +136,12 @@ export default function Leadership() {
                 Musalla (W11-110) where various topics are discussed. Free dinner provided.
               </li>
               <li>
+                <strong>Dua Kumayl &amp; Lecture</strong> — Biweekly on Thursdays, Dua, Lecture, Dinner
+              </li>
+              <li>
+                <strong>Quran Study</strong> — Biweekly on Fridays, Exegesis (Tafsir) of Quran and Special Topics, Dinner
+              </li>
+              <li>
                 <strong>Student Outreach</strong> — Reaches out to Muslim students to check on
                 their wellbeing and hear about their experiences.
               </li>
@@ -128,8 +150,7 @@ export default function Leadership() {
                 spiritual, or academic concerns.
               </li>
               <li>
-                <strong>Collaboration</strong> — Works with Dr. Hossein Mosallaei, the Muslim
-                Shia Chaplain and advisor to Mobin, to ensure all students are served with equity.
+                <strong>Collaboration</strong> — Works with Dr. Hossein Mosallaei, the Muslim Shia Chaplain, to ensure all students are served with equity.
               </li>
               <li>
                 <strong>Advocacy</strong> — Advocates for Muslims on campus, including housing
@@ -145,15 +166,6 @@ export default function Leadership() {
                 <strong>Interfaith Programs</strong> — Works with other chaplains from ORSEL to
                 provide programs for all students.
               </li>
-            </ul>
-          </div>
-
-          <div className="info-box mb-8">
-            <h3 className="info-box__title">Contact Information</h3>
-            <ul className="list-none">
-              <li><strong>Address:</strong> 40 Massachusetts Avenue, Building W11 - Room 011</li>
-              <li><strong>Phone:</strong> (617) 258-9285</li>
-              <li><strong>Email:</strong> <a href="mailto:mchnada@mit.edu" className="link">mchnada@mit.edu</a></li>
             </ul>
           </div>
 
