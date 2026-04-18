@@ -136,10 +136,10 @@ export default function Leadership() {
                 Musalla (W11-110) where various topics are discussed. Free dinner provided.
               </li>
               <li>
-                <strong>Dua Kumayl &amp; Lecture</strong> — Biweekly on Thursdays, Dua, Lecture, Dinner
+                <strong>Dua Kumayl &amp; Lecture</strong> — Biweekly on Thursdays, Dua, Lecture, Dinner.
               </li>
               <li>
-                <strong>Quran Study</strong> — Biweekly on Fridays, Exegesis (Tafsir) of Quran and Special Topics, Dinner
+                <strong>Quran Study</strong> — Biweekly on Fridays, Exegesis (Tafsir) of Quran and Special Topics, Dinner.
               </li>
               <li>
                 <strong>Student Outreach</strong> — Reaches out to Muslim students to check on
