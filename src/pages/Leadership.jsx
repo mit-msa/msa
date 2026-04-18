@@ -1,6 +1,6 @@
 import { Hero, Section } from '../components/ui';
 import nadaImage from '../assets/images/nada.jpg';
-import hosseinImage from '../assets/images/hossein.png';
+import hosseinImage from '../assets/images/hossein.jpg';
 import zehraImage from '../assets/images/zehra.jpeg';
 
 /**
@@ -55,20 +55,22 @@ export default function Leadership() {
               <img
                 src={hosseinImage}
                 alt="Dr. Hossein Mosallaei"
-                className="w-48 h-48 object-cover rounded-lg shadow-md"
+                className="rounded-lg shadow-md"
+                style={{ width: '18rem', height: '18rem', maxWidth: '18rem', objectFit: 'cover' }}
               />
             </div>
             <div>
               <h3 className="text-2xl font-semibold mb-2">Dr. Hossein Mosallaei</h3>
               <p className="text-sm text-muted mb-4">Shia Muslim Chaplain</p>
               <p className="text-muted mb-4">
-                Dr. Hossein Mosallaei is a Shia Muslim Chaplain at MIT and supports the Mobin
-                student group through the Office of Religious, Spiritual, and Ethical Life.
+                Dr. Hossein Mosallaei is a Shia Muslim Chaplain at MIT who supports our students 
+                through the Office of Religious, Spiritual, and Ethical Life, providing guidance, 
+                pastoral care, and a welcoming space for spiritual reflection and community building.
               </p>
               <p className="text-muted mb-4">
                 He has been actively involved with student groups at different universities and
-                has supported Shia student efforts at MIT since 2007 through Mobin and MSA under
-                ZEKR, helping organize Quran Study, Dua Kumayl, Nahj al-Balagha, Sahifa Sajjadiya,
+                has supported Shia student efforts at MIT since 2007 through Mobin and MSA under{' '}
+                <a href="https://sites.mit.edu/zekrmit/" className="link">ZEKR</a>, helping organize Quran Study, Dua Kumayl, Nahj al-Balagha, Sahifa Sajjadiya,
                 and lecture series.
               </p>
               <p className="text-muted">
@@ -85,7 +87,8 @@ export default function Leadership() {
               <img
                 src={zehraImage}
                 alt="Zehra Imam"
-                className="w-48 h-48 object-cover rounded-lg shadow-md"
+                className="rounded-lg shadow-md"
+                style={{ width: '18rem', height: '18rem', maxWidth: '18rem', objectFit: 'cover' }}
               />
             </div>
             <div>
