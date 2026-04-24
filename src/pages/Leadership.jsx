@@ -116,14 +116,12 @@ export default function Leadership() {
                 spaces conducive to wellbeing and belonging.
               </p>
               <p className="text-muted mb-4">
-                She is the founder of Illuminated Cities, a creative arts organization that works
-                with communities impacted by systemic violence. She was a 2024 Fellow at Sacred
-                Writes, and her work has been published in The Intercept, The Nation, Mondoweiss,
-                and Harvard's Religion and Public Life blog.
+                She is the founder of <a href="https://www.instagram.com/illuminated_cities/?hl=en" className="link">Illuminated Cities</a>, a creative arts education organization that works
+                with communities impacted by systemic violence. She was a 2024 Fellow at <a href="https://urldefense.proofpoint.com/v2/url?u=https-3A__www.sacred-2Dwrites.org_luce-2Dcohort-2Dsummer-2D2024&d=DwMFaQ&c=WO-RGvefibhHBZq3fL85hQ&r=COArRfeXqkGvKulfjUwwcc0IUQoP-x1ypJ8a4XkAJv0&m=0Mksqn8GdalXOOIoD9hUOWaVLIX-p671AT7mDVbTuSNfEunu0yDsE3Lxw-3IwtuP&s=KOsTDVIEJ_HCz3f6AbqTQXyT6UabaR9Q-ohSgOfK2FQ&e=" className="link">Sacred Writes</a>, and her work has been published in <em><a href="https://theintercept.com/2025/07/05/harvard-graduation-speech-gaza-palestine-genocide/" className="link">The Intercept</a></em>, <em><a href="https://www.thenation.com/authors/zehra-imam/" className="link">The Nation</a></em>, <em><a href="https://mondoweiss.net/author/zehra-imam/" className="link">Mondoweiss</a></em>,
+                and <em><a href="https://rpl.hds.harvard.edu/news/2024/05/29/love-letters-to-god-in-palestine" className="link">Harvard's Religion and Public Life Blog</a></em>.
               </p>
               <p className="text-muted">
-                Zehra has worked in education in the U.S., the Middle East, and South Asia and is
-                a graduate of Harvard Divinity School.
+                Zehra has worked in international education and is a graduate of Harvard Divinity School.
               </p>
             </div>
           </div>
