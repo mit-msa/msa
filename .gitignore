@@ -26,6 +26,3 @@ dist-ssr
 .env
 .env.local
 .env.*.local
-
-# Automated deployment script (in progress)
-deploy.sh
