@@ -64,21 +64,12 @@ src/
 
 ## Deployment to MIT Athena
 
-1. Build the production version:
-   ```bash
-   npm run build
-   ```
+Run the deployment script from the project root:
 
-2. Upload the contents of the `dist/` folder to your Athena web directory:
-   ```bash
-   scp -r dist/* username@athena.dialup.mit.edu:~/web_scripts/msa/
-   ```
-
-3. Set appropriate permissions:
-   ```bash
-   ssh username@athena.dialup.mit.edu
-   chmod -R 755 ~/web_scripts/msa/
-   ```
+```bash
+chmod +x deploy.sh
+./deploy.sh
+```
 
 The site uses `HashRouter` which works without server-side routing configuration.
 
