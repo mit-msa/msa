@@ -11,7 +11,7 @@ export default function Leadership() {
     <>
       <Hero
         title="Leadership"
-        subtitle="Meet our chaplain and learn about spiritual guidance at MIT."
+        subtitle="Meet our chaplains and learn about spiritual guidance at MIT."
       />
 
       <Section>
