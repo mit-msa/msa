@@ -6,3 +6,4 @@ export { default as CommunityActivities } from './CommunityActivities';
 export { default as Resources } from './Resources';
 export { default as Leadership } from './Leadership';
 export { default as Join } from './Join';
+export { default as ExecutiveCommittee } from './ExecutiveCommittee';

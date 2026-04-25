@@ -430,6 +430,35 @@
 }
 
 /* ==========================================================================
+   Executive Committee
+   ========================================================================== */
+
+.executive-roles {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.executive-role {
+  padding: var(--space-6);
+  border: 1px solid var(--color-neutral-200);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-neutral-0);
+  box-shadow: var(--shadow-sm);
+}
+
+.executive-role__title {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-3);
+  color: var(--color-neutral-900);
+}
+
+.executive-role__description {
+  color: var(--color-neutral-700);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
    Links
    ========================================================================== */
 

@@ -9,6 +9,7 @@ import {
   Resources,
   Leadership,
   Join,
+  ExecutiveCommittee,
 } from './pages';
 
 /**
@@ -28,6 +29,7 @@ export default function App() {
         <Route path="community-activities" element={<CommunityActivities />} />
         <Route path="resources" element={<Resources />} />
         <Route path="leadership" element={<Leadership />} />
+        <Route path="executive-committee" element={<ExecutiveCommittee />} />
         <Route path="join" element={<Join />} />
       </Route>
     </Routes>

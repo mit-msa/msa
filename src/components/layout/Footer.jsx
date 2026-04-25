@@ -50,6 +50,11 @@ export default function Footer() {
                   Leadership
                 </Link>
               </li>
+              <li>
+                <Link to="/executive-committee" className="footer__link">
+                  Executive Committee
+                </Link>
+              </li>
             </ul>
           </div>
 

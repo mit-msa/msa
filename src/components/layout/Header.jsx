@@ -16,6 +16,7 @@ export default function Header() {
     { to: '/community-activities', label: 'Community Activities' },
     { to: '/resources', label: 'Resources' },
     { to: '/leadership', label: 'Leadership' },
+    { to: '/executive-committee', label: 'Executive Committee' },
   ];
 
   const toggleMobileMenu = () => {
