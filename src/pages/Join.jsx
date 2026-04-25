@@ -29,7 +29,7 @@ export default function Join() {
             <h3 className="cta-section__title">Subscribe to Our Mailing List</h3>
             <p className="cta-section__text">
               Email{' '}
-              <a className="link text-white" href="mailto:msa-webmaster@mit.edu">
+              <a className="link" href="mailto:msa-webmaster@mit.edu">
                 msa-webmaster@mit.edu
               </a>{' '}
               to join the mailing list and stay connected with the MIT Muslim community.

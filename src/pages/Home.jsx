@@ -214,7 +214,7 @@ export default function Home() {
             </p>
             <p className="cta-section__text">
               Email{' '}
-              <a className="link text-white" href="mailto:msa-webmaster@mit.edu">
+              <a className="link" href="mailto:msa-webmaster@mit.edu">
                 msa-webmaster@mit.edu
               </a>{' '}
               to join the mailing list.
