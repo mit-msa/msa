@@ -6,12 +6,22 @@ import e51Image from '../assets/images/prayer/e51.jpeg';
 import e52Image from '../assets/images/prayer/e52.jpeg';
 import building45Image from '../assets/images/prayer/building_45.jpeg';
 import oasisImage from '../assets/images/prayer/oasis.jpeg';
+import mitChapelImage from '../assets/images/prayer/mitchapel.jpg';
+import ihqE38Image from '../assets/images/prayer/ihq_e38.jpg';
+import walkerImage from '../assets/images/prayer/walker.jpeg';
 
 /**
  * Prayer page - Prayer spaces and times information
  */
 export default function Prayer() {
   const prayerSpaces = [
+    {
+      name: 'MIT Chapel',
+      location: 'Building W15',
+      type: 'Quiet Space',
+      description: 'Quiet space on campus for personal reflection, meditation, and prayer.',
+      image: mitChapelImage,
+    },
     {
       name: 'MIT Musalla (W11)',
       location: 'Building W11',
@@ -35,8 +45,8 @@ export default function Prayer() {
       image: e51Image,
     },
     {
-      name: 'Building 45',
-      location: 'Building 45',
+      name: 'Schwarzman College of Computing',
+      location: 'Building 45-204',
       type: 'Multi-faith',
       description: 'Additional prayer and meditation space on campus.',
       image: building45Image,
@@ -47,6 +57,22 @@ export default function Prayer() {
       type: 'Multi-faith',
       description: 'Quiet space for reflection and prayer on the second floor of Hayden Library.',
       image: oasisImage,
+    },
+    {
+      name: 'iHQ Innovation Headquarters',
+      location: 'Building E38, 6th Floor',
+      type: 'Quiet Space',
+      description: 'Quiet space in iHQ for reflection, meditation, and prayer.',
+      image: ihqE38Image,
+      accessLink: 'https://ihq.mit.edu/students/student-after-hours/',
+      accessLabel: 'Request after-hours access for E38',
+    },
+    {
+      name: 'Walker Quiet Space',
+      location: 'Building 50-305',
+      type: 'Quiet Space',
+      description: 'Quiet space in Walker Memorial for personal reflection, meditation, and prayer.',
+      image: walkerImage,
     },
   ];
 
@@ -148,6 +174,18 @@ export default function Prayer() {
                   </div>
                   <Card.Subtitle>{space.location}</Card.Subtitle>
                   <Card.Text>{space.description}</Card.Text>
+                  {space.accessLink && (
+                    <p className="mt-3">
+                      <a
+                        href={space.accessLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="link"
+                      >
+                        {space.accessLabel || 'Access information'}
+                      </a>
+                    </p>
+                  )}
                 </Card.Content>
               </Card>
             ))}
