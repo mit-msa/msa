@@ -36,6 +36,10 @@ import yusufImg from '../assets/images/mosques/yusuf_mosque.jpg';
 import foodlandImg from '../assets/images/off_campus_resources/foodland.jpeg';
 import qualityImg from '../assets/images/off_campus_resources/quality.jpeg';
 import cheemasImg from '../assets/images/off_campus_resources/cheemas.jpeg';
+import alBaraImg from '../assets/images/off_campus_resources/al_bara.jpeg';
+import gardenHalalImg from '../assets/images/off_campus_resources/garden_halal.jpeg';
+import sayarImg from '../assets/images/off_campus_resources/sayar.jpeg';
+import vanakImg from '../assets/images/off_campus_resources/vanak.jpg';
 
 // MSA lounge images
 import loungeImg1 from '../assets/images/Lounge pics/WhatsApp Image 2026-04-24 at 21.52.34.jpeg';
@@ -182,6 +186,26 @@ export default function Resources() {
       name: "Cheema's",
       description: 'South Asian grocery with halal meats and spices.',
       image: cheemasImg,
+    },
+    {
+      name: 'Al Bara Market',
+      description: 'Neighborhood halal market with pantry staples, fresh produce, and halal meat options.',
+      image: alBaraImg,
+    },
+    {
+      name: 'Garden Halal Market',
+      description: 'Local halal grocery for meat, spices, and everyday essentials.',
+      image: gardenHalalImg,
+    },
+    {
+      name: 'Sayar Market',
+      description: 'Convenient halal-friendly market carrying groceries and international products.',
+      image: sayarImg,
+    },
+    {
+      name: 'Vanak Market',
+      description: 'Specialty market with Middle Eastern items, herbs, and halal-friendly ingredients.',
+      image: vanakImg,
     },
   ];
 
