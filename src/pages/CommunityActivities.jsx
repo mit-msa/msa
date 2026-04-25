@@ -1,14 +1,14 @@
 import { useState } from 'react';
 import { Hero, Section } from '../components/ui';
 
-import photo1 from '../assets/images/FreshmanOutingForWebsite/IMG_0592.JPG';
-import photo2 from '../assets/images/FreshmanOutingForWebsite/IMG_0612.PNG';
-import photo3 from '../assets/images/FreshmanOutingForWebsite/IMG_0613.PNG';
-import photo4 from '../assets/images/FreshmanOutingForWebsite/IMG_0614.PNG';
-import photo5 from '../assets/images/FreshmanOutingForWebsite/IMG_0615.PNG';
-import photo6 from '../assets/images/FreshmanOutingForWebsite/IMG_0616.PNG';
-import photo7 from '../assets/images/FreshmanOutingForWebsite/IMG_0618.PNG';
-import photo8 from '../assets/images/FreshmanOutingForWebsite/IMG_0619.PNG';
+import photo1 from '../assets/images/FreshmanOutingForWebsite/IMG_0592.jpg';
+import photo2 from '../assets/images/FreshmanOutingForWebsite/IMG_0612.jpg';
+import photo3 from '../assets/images/FreshmanOutingForWebsite/IMG_0613.jpg';
+import photo4 from '../assets/images/FreshmanOutingForWebsite/IMG_0614.jpg';
+import photo5 from '../assets/images/FreshmanOutingForWebsite/IMG_0615.jpg';
+import photo6 from '../assets/images/FreshmanOutingForWebsite/IMG_0616.jpg';
+import photo7 from '../assets/images/FreshmanOutingForWebsite/IMG_0618.jpg';
+import photo8 from '../assets/images/FreshmanOutingForWebsite/IMG_0619.jpg';
 import photo9 from '../assets/images/FreshmanOutingForWebsite/IMG_2336.JPEG';
 
 const eid26ImageModules = import.meta.glob('../assets/images/Eid 26/*.{JPG,JPEG,PNG,jpg,jpeg,png}', {
