@@ -71,6 +71,8 @@ chmod +x deploy.sh
 ./deploy.sh
 ```
 
+Enter your kerb and password when prompted by the script to authenticate the deployment process
+
 The site uses `HashRouter` which works without server-side routing configuration.
 
 ## Contributing
