@@ -100,7 +100,7 @@ export default function Home() {
                 <span className="badge mb-4">Weekly</span>
                 <Card.Title>Connect</Card.Title>
                 <Card.Text>
-                 A weekly spiritual gathering where a variety of topics are discussed, and speakers are welcome. Topics are suggested by attendees. Connect runs during the school year at 5:30 PM EST in the Musalla (Room W11-110). Dinner is provided for free.
+                A weekly spiritual gathering where a variety of topics are discussed, and speakers are welcome. Topics are suggested by attendees. Connect runs during the school year at 5:30 PM EST in the Musalla (Room W11-110). Free dinner is provided.
                 </Card.Text>
                 <p className="text-sm text-muted mt-4">
                   <CalendarIcon width={16} height={16} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '4px' }} />

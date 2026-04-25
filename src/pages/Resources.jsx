@@ -100,7 +100,7 @@ export default function Resources() {
       image: sufraMediterraneanImg,
     },
     {
-      name: 'Ilmondo Pizzeria',
+      name: 'Il Mondo Pizzeria',
       description: 'Boston pizzeria serving pizzas, subs, salads, and pasta.',
       image: ilmondoPizzeriaImg,
     },
@@ -120,7 +120,7 @@ export default function Resources() {
       image: kushariGrillImg,
     },
     {
-      name: 'Tribos Peri peri',
+      name: 'Tribos Peri Peri',
       description: 'Peri-peri chicken restaurant with bold grilled flavors.',
       image: tribosPeriPeriImg,
     },
@@ -242,7 +242,7 @@ export default function Resources() {
 
   const msaLoungeImages = [
     {
-      title: 'MSA Lounge - Seating Area',
+      title: 'MSA Lounge',
       description: 'A cozy corner for catching up with friends, studying, and relaxing between classes.',
       image: loungeImg1,
     },
@@ -434,6 +434,7 @@ export default function Resources() {
           <h2 className="text-3xl font-bold mb-6 text-center">MSA Lounge</h2>
           <p className="text-muted mb-8 text-center max-w-md mx-auto">
             A welcoming and cozy place where you can hang out with fellow members of the MSA and enjoy the many events held here.
+            You can find it in W31-110.
           </p>
           <div className="grid grid--1">
             {msaLoungeImages.map((item) => (

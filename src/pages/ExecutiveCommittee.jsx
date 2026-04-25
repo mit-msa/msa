@@ -4,52 +4,52 @@ const committeeRoles = [
   {
     title: 'President',
     description:
-      'The MSA President provides high-level leadership by overseeing the Executive Committee, assigning committee oversight, and helping committees set and meet goals aligned with MSA\'s mission. The President gives EC members independence in execution while helping them access resources, following up on responsibilities, and resolving issues between EC members and committees. The President is also the public face of MSA to the MIT community and administration. Requirements: at least one full prior EC term and a commitment to advise the next EC during transition.',
+      'The MSA President provides high-level leadership by overseeing the Executive Committee, assigning committee oversight, and helping committees set and meet goals aligned with MSA\'s mission. The President gives EC members independence in execution while helping them access resources, following up on responsibilities, and resolving issues between EC members and committees. The President is also the public face of MSA to the MIT community and administration.',
   },
   {
-    title: 'Vice-President',
+    title: 'Vice President',
     description:
-      'The MSA Vice President serves as a support for both the presidency role and the broader community. VP helps to run logistical operations of the MSA including communicating between administration and students.',
-  },
-  {
-    title: 'Tarbiyah Committee Chair',
-    description:
-      'As the Tarbiyah and Musalla Committee, we are your go-tos for any spiritual needs! We primarily ensure Jumaa (the Friday Prayer) occurs weekly, organize daily congregational prayers, host halaqas and spiritual reminders, and maintain the musala (prayer area). During Ramadan, we also organize the tarawih (nightly) prayers in addition to other spiritually uplifting events. Feel free to reach out for any feedback or requests!',
+      'The MSA Vice President serves as a support for both the President and the broader community. The Vice President helps run logistical operations of the MSA, including communicating between administration and students.',
   },
   {
     title: 'Treasurer',
     description:
-      'The teasurer is responsible for managing the finances of the MSA, ensuring availability of funds, and coordinating the budget and spending across MSA events.',
+      'The Treasurer is responsible for managing the finances of the MSA, ensuring availability of funds, and coordinating the budget and spending across MSA events.',
   },
   {
-    title: 'External Committee Chair',
+    title: 'Tarbiyah & Musalla Committee',
     description:
-      'The External and Alumni Relations Committee works closely with the MSA Ramadan Committee and MAA (Muslim Alumni Association) to run the MSA 24 hour challenge. During the challenge, the MSA raises upwards of $25,000 to help fund our nightly Ramadan Iftars and Eid activities. This committee also works to connect the MIT MSA with other clubs on campus and Muslim students in the area.',
+      'The Tarbiyah and Musalla Committee handles the spiritual needs of the MSA. They primarily ensure Jumaa (the Friday Prayer) occurs weekly, organize daily congregational prayers, host halaqas and spiritual reminders, and maintain the Musalla (prayer area). During Ramadan, they also organize the Tarawih prayers in addition to other spiritually uplifting events.',
   },
   {
-    title: 'Social Committee Chair',
+    title: 'External & Alumni Relations Committee',
     description:
-      'The Social Committee Chair organizes regular events that bring members of the MSA community together, including Tuesday Tea, study breaks, and game nights, and is in charge of organizing CPW events and Senior Night.',
+      'The External and Alumni Relations Committee works closely with the MSA Ramadan Committee and MAA (Muslim Alumni Association) to run the MSA 24 Hour Challenge. During the challenge, the MSA raises upwards of $25,000 to help fund our nightly Ramadan Iftars and Eid activities. This committee also works to connect the MIT MSA with other clubs on campus and Muslim students in the area.',
   },
   {
-    title: 'Publicity & Social Media Management Committee Chair',
+    title: 'Social Committee',
     description:
-      'The Publicity & Social Media Management Committee Chair publicizes MSA activities across communication channels (social media, mailing list, WhatsApp chat, dormspam, and more), creates and designs posters, handles external communication via social media, and oversees MSA content creation efforts.',
+      'The Social Committee organizes regular events that bring members of the MSA community together, including Tuesday Tea, study breaks, and game nights. They are also in charge of organizing CPW events and Senior Night.',
   },
   {
-    title: 'Graduate Representative Committee Chair',
+    title: 'Large Events Committee',
     description:
-      'The Graduate Representative Committee Chair manages the Graduate Student MSA and its finances, runs events and initiatives focused on the graduate student community, and promotes graduate participation in broader programming.',
+      'The Large Events Committee organizes larger events that bring together members of the MSA community, such as Eid, Fall/Spring dinners, speaker series, and meal packs.',
   },
   {
-    title: 'Web Committee Chair',
+    title: 'Publicity & Social Media Management Committee',
     description:
-      'The Web Committee Chair maintains the website, manages mailing lists, and handles all web-related matters for the MSA. They also follow up on inquiries submitted through the website and bring them to the Executive Committee when needed. Additionally, they develop automations that support Executive Committee operations, such as iftar guest management and Ramadan meal swipe tracking.',
+      'The Publicity & Social Media Management Committee publicizes MSA activities across communication channels (social media, mailing list, WhatsApp chat, dormspam, and more), creates and designs posters, handles external communication via social media, and oversees MSA content creation efforts.',
   },
   {
-    title: 'Large Events Committee Chair',
+    title: 'Graduate Representative Committee',
     description:
-      'The Large Events Committee Chair organizes larger events that bring together members of the MSA community, such as Eid, Fall/Spring dinners, speaker series, and meal packs.',
+      'The Graduate Representative Committee manages the Graduate Student MSA and its finances, runs events and initiatives focused on the graduate student community, and promotes graduate participation in broader programming.',
+  },
+  {
+    title: 'Web Committee',
+    description:
+      'The Web Committee maintains the website, manages mailing lists, and handles all web-related matters for the MSA. They also follow up on inquiries submitted through the website and bring them to the Executive Committee when needed. Additionally, they develop automations that support Executive Committee operations, such as Iftar guest management and Ramadan meal swipe tracking.',
   },
 ];
 
