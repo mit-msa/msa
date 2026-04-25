@@ -3,7 +3,25 @@ import { Hero, Section, Card } from '../components/ui';
 // Restaurant images
 import halalguysImg from '../assets/images/restaurants/halalguys.jpeg';
 import shahsImg from '../assets/images/restaurants/shahs.jpg';
-import sofraImg from '../assets/images/restaurants/sofra.jpg';
+import silkRoadImg from '../assets/images/restaurants/silk-road.webp';
+import babAlYemenImg from '../assets/images/restaurants/bab-al-yemen.jpg';
+import turkishLazuriImg from '../assets/images/restaurants/turkish-lazuri.jpg';
+import luxorCafeImg from '../assets/images/restaurants/luxor-cafe.jpg';
+import aliBabaImg from '../assets/images/restaurants/ali-baba.jpg';
+import crispyDoughImg from '../assets/images/restaurants/crispy-dough.png';
+import jahungerImg from '../assets/images/restaurants/jahunger.jpg';
+import sufraMediterraneanImg from '../assets/images/restaurants/sufra-mediterranean.jpg';
+import ilmondoPizzeriaImg from '../assets/images/restaurants/ilmondo-pizzeria.jpg';
+import falafelPlaceImg from '../assets/images/restaurants/falafel-place.png';
+import arganaFalafelImg from '../assets/images/restaurants/argana.png';
+import kushariGrillImg from '../assets/images/restaurants/kushari-grill.jpg';
+import tribosPeriPeriImg from '../assets/images/restaurants/tribos-peri-peri.jpg';
+import fattoushGrillImg from '../assets/images/restaurants/fattoush-grill.png';
+import alisUyghurKitchenImg from '../assets/images/restaurants/alis-uyghur-kitchen.jpg';
+import casablancaImg from '../assets/images/restaurants/casablanca.jpg';
+import thymeSajImg from '../assets/images/restaurants/thyme-saj.jpg';
+import madaImg from '../assets/images/restaurants/mada.png';
+import nakhonHalalThaiImg from '../assets/images/restaurants/nakhon-halal-thai.jpg';
 import blackseedImg from '../assets/images/restaurants/blackseed.jpg';
 import davesImg from '../assets/images/restaurants/daves.jpeg';
 import peshwariImg from '../assets/images/restaurants/peshwari.png';
@@ -38,9 +56,99 @@ export default function Resources() {
       image: shahsImg,
     },
     {
-      name: 'Sofra Bakery & Cafe',
-      description: 'Middle Eastern bakery and cafe with many halal options.',
-      image: sofraImg,
+      name: 'Silk Road',
+      description: 'Cambridge Uyghur restaurant known for hand-pulled noodles and hearty halal dishes.',
+      image: silkRoadImg,
+    },
+    {
+      name: 'Bab Al Yemen',
+      description: 'Yemeni restaurant serving lamb mendi, haneeth, fahsa, and other traditional dishes.',
+      image: babAlYemenImg,
+    },
+    {
+      name: 'Turkish Lazuri',
+      description: 'Mediterranean cafe with halal breakfast, lunch, and dinner.',
+      image: turkishLazuriImg,
+    },
+    {
+      name: 'Luxor Cafe',
+      description: 'Family-owned Harvard Square cafe-deli with coffee, teas, pastries, and light bites.',
+      image: luxorCafeImg,
+    },
+    {
+      name: 'Ali Baba',
+      description: 'Boston halal Middle Eastern and Turkish restaurant for delivery or takeout.',
+      image: aliBabaImg,
+    },
+    {
+      name: 'Crispy Dough',
+      description: 'Halal pizza spot near ISBCC serving pizzas and comfort food.',
+      image: crispyDoughImg,
+    },
+    {
+      name: 'Jahunger',
+      description: 'Award-winning Uyghur restaurant serving hand-pulled noodles and Central Asian specialties.',
+      image: jahungerImg,
+    },
+    {
+      name: 'Sufra Mediterranean',
+      description: 'Boston Mediterranean restaurant with classic mezze and grill dishes.',
+      image: sufraMediterraneanImg,
+    },
+    {
+      name: 'Ilmondo Pizzeria',
+      description: 'Boston pizzeria serving pizzas, subs, salads, and pasta.',
+      image: ilmondoPizzeriaImg,
+    },
+    {
+      name: 'Falafel Place',
+      description: 'Somerville falafel shop with certified halal Middle Eastern plates.',
+      image: falafelPlaceImg,
+    },
+    {
+      name: 'Argana Falafel (MIT)',
+      description: 'MIT-area falafel option for quick wraps, platters, and Middle Eastern bites.',
+      image: arganaFalafelImg,
+    },
+    {
+      name: 'Kushari & Grill',
+      description: 'Medford restaurant for kushari, grilled meats, and Egyptian comfort food.',
+      image: kushariGrillImg,
+    },
+    {
+      name: 'Tribos Peri peri',
+      description: 'Peri-peri chicken restaurant with bold grilled flavors.',
+      image: tribosPeriPeriImg,
+    },
+    {
+      name: 'Fattoush Grill',
+      description: 'Halal grill and bakery serving Middle Eastern plates and mixed grill meals.',
+      image: fattoushGrillImg,
+    },
+    {
+      name: "Ali's Uyghur Kitchen",
+      description: 'Boston Uyghur restaurant with hand-pulled noodles and regional specialties.',
+      image: alisUyghurKitchenImg,
+    },
+    {
+      name: 'Casablanca',
+      description: 'Revere halal restaurant serving Moroccan and Middle Eastern dishes.',
+      image: casablancaImg,
+    },
+    {
+      name: 'Thyme Saj',
+      description: 'Middle Eastern restaurant known for saj wraps, salads, and mezze.',
+      image: thymeSajImg,
+    },
+    {
+      name: 'Mada',
+      description: 'Everett halal food truck serving quick Middle Eastern eats.',
+      image: madaImg,
+    },
+    {
+      name: 'Nakhon Halal Thai',
+      description: 'Boston Thai halal spot serving curries, noodles, and stir-fries.',
+      image: nakhonHalalThaiImg,
     },
     {
       name: 'Black Seed Halal Grill',
