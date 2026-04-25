@@ -428,8 +428,29 @@ export default function Resources() {
         </div>
       </Section>
 
+      {/* MSA Lounge */}
+      <Section id="msa-lounge">
+        <div className="container">
+          <h2 className="text-3xl font-bold mb-6 text-center">MSA Lounge</h2>
+          <p className="text-muted mb-8 text-center max-w-md mx-auto">
+            A welcoming and cozy place where you can hang out with fellow members of the MSA and enjoy the many events held here.
+          </p>
+          <div className="grid grid--1">
+            {msaLoungeImages.map((item) => (
+              <Card key={item.title}>
+                <Card.Image src={item.image} alt={item.title} />
+                <Card.Content>
+                  <Card.Title>{item.title}</Card.Title>
+                  <Card.Text>{item.description}</Card.Text>
+                </Card.Content>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </Section>
+
       {/* Useful Links */}
-      <Section>
+      <Section variant="light" id="useful-links">
         <div className="container container--md">
           <h2 className="text-3xl font-bold mb-6 text-center">Useful Links</h2>
           <div className="grid grid--2">
@@ -452,29 +473,8 @@ export default function Resources() {
         </div>
       </Section>
 
-      {/* MSA Lounge */}
-      <Section id="msa-lounge">
-        <div className="container">
-          <h2 className="text-3xl font-bold mb-6 text-center">MSA Lounge</h2>
-          <p className="text-muted mb-8 text-center max-w-md mx-auto">
-            A welcoming and cozy place where you can hang out with fellow members of the MSA and enjoy the many events held here.
-          </p>
-          <div className="grid grid--1">
-            {msaLoungeImages.map((item) => (
-              <Card key={item.title}>
-                <Card.Image src={item.image} alt={item.title} />
-                <Card.Content>
-                  <Card.Title>{item.title}</Card.Title>
-                  <Card.Text>{item.description}</Card.Text>
-                </Card.Content>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </Section>
-
       {/* Islamic learning and deen resources */}
-      <Section variant="light" id="islamic-resources">
+      <Section id="islamic-resources">
         <div className="container">
           <h2 className="text-3xl font-bold mb-6 text-center">Deen Exploration</h2>
           <p className="text-muted mb-8 text-center max-w-md mx-auto">
@@ -507,6 +507,7 @@ export default function Resources() {
           </div>
         </div>
       </Section>
+
     </>
   );
 }
