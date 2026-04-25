@@ -222,6 +222,33 @@ export default function Home() {
           </div>
         </div>
       </Section>
+
+      {/* Feedback Section */}
+      <Section variant="light">
+        <div className="container">
+          <Section.Header
+            title="Share Your Feedback"
+            subtitle="Tell us how we can improve events, resources, and the MIT MSA website."
+          />
+
+          <div className="cta-section">
+            <div className="cta-section__pattern-wrapper">
+              <div className="cta-section__pattern" aria-hidden="true" />
+            </div>
+            <p className="cta-section__text">
+              We welcome ideas, suggestions, and general comments from students,
+              alumni, and community members.
+            </p>
+            <Button
+              href="https://forms.gle/D6yE97HCK3qvrc1Y9"
+              variant="primary"
+              size="lg"
+            >
+              Leave Feedback
+            </Button>
+          </div>
+        </div>
+      </Section>
     </>
   );
 }
