@@ -88,6 +88,19 @@
 
 .leadership-photo {
   display: block;
+  max-width: 100%;
+}
+
+.leadership-profile {
+  align-items: flex-start;
+}
+
+.leadership-profile > :last-child {
+  min-width: 0;
+}
+
+.leadership-photo-wrap {
+  width: 100%;
 }
 
 .leadership-photo--nada {
@@ -98,10 +111,36 @@
   object-position: top center;
 }
 
+.leadership-photo--chaplain {
+  width: min(100%, 18rem);
+  max-width: 18rem;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  object-fit: cover;
+}
+
 @media (max-width: 640px) {
+  .leadership-profile {
+    gap: var(--space-6);
+  }
+
+  .leadership-photo-wrap {
+    padding: var(--space-2) 0;
+  }
+
   .leadership-photo--nada {
     width: min(100%, 15rem);
     max-width: 15rem;
+  }
+
+  .leadership-photo--chaplain {
+    width: min(100%, 15rem);
+    max-width: 15rem;
+  }
+
+  .leadership-profile p,
+  .leadership-profile li {
+    overflow-wrap: anywhere;
   }
 }
 

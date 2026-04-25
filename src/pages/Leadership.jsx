@@ -18,8 +18,8 @@ export default function Leadership() {
         <div className="container container--md">
           <h2 className="text-3xl font-bold mb-6">Muslim Chaplain</h2>
 
-          <div className="flex flex-col md:flex-row gap-12 mb-8">
-            <div className="flex-shrink-0 p-4">
+          <div className="flex flex-col md:flex-row gap-12 mb-8 leadership-profile">
+            <div className="flex-shrink-0 p-4 leadership-photo-wrap">
               <img
                 src={nadaImage}
                 alt="Sister Nada Miqdadi El-Alami"
@@ -59,13 +59,12 @@ export default function Leadership() {
 
           <h2 className="text-3xl font-bold mb-6">Shia Muslim Chaplain</h2>
 
-          <div className="flex flex-col md:flex-row gap-12 mb-8">
-            <div className="flex-shrink-0 p-4">
+          <div className="flex flex-col md:flex-row gap-12 mb-8 leadership-profile">
+            <div className="flex-shrink-0 p-4 leadership-photo-wrap">
               <img
                 src={hosseinImage}
                 alt="Dr. Hossein Mosallaei"
-                className="rounded-lg shadow-md"
-                style={{ width: '18rem', height: '18rem', maxWidth: '18rem', objectFit: 'cover' }}
+                className="leadership-photo leadership-photo--chaplain rounded-lg shadow-md"
               />
             </div>
             <div>
@@ -98,13 +97,12 @@ export default function Leadership() {
 
           <h2 className="text-3xl font-bold mb-6">Associate Muslim Chaplain</h2>
 
-          <div className="flex flex-col md:flex-row gap-12 mb-8">
-            <div className="flex-shrink-0 p-4">
+          <div className="flex flex-col md:flex-row gap-12 mb-8 leadership-profile">
+            <div className="flex-shrink-0 p-4 leadership-photo-wrap">
               <img
                 src={zehraImage}
                 alt="Zehra Imam"
-                className="rounded-lg shadow-md"
-                style={{ width: '18rem', height: '18rem', maxWidth: '18rem', objectFit: 'cover' }}
+                className="leadership-photo leadership-photo--chaplain rounded-lg shadow-md"
               />
             </div>
             <div>
