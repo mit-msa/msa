@@ -92,6 +92,9 @@
 }
 
 .leadership-profile {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-8);
   align-items: flex-start;
 }
 
@@ -100,7 +103,9 @@
 }
 
 .leadership-photo-wrap {
-  width: 100%;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .leadership-photo--nada {
@@ -141,6 +146,60 @@
   .leadership-profile p,
   .leadership-profile li {
     overflow-wrap: anywhere;
+  }
+}
+
+@media (min-width: 900px) {
+  .leadership-profile {
+    grid-template-columns: minmax(14rem, 18rem) minmax(0, 1fr);
+    gap: var(--space-10);
+  }
+
+  .leadership-photo-wrap {
+    margin: 0;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1199px) and (orientation: landscape) {
+  .leadership-profile {
+    grid-template-columns: minmax(13rem, 15rem) minmax(0, 1fr);
+    gap: var(--space-8);
+  }
+
+  .leadership-photo--nada,
+  .leadership-photo--chaplain {
+    width: min(100%, 15rem);
+    max-width: 15rem;
+  }
+}
+
+/* Orientation-aware layout tuning */
+@media (orientation: portrait) and (max-width: 899px) {
+  .leadership-profile {
+    grid-template-columns: 1fr;
+  }
+
+  .leadership-photo-wrap {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 899px) {
+  .leadership-profile {
+    grid-template-columns: minmax(11rem, 13rem) minmax(0, 1fr);
+    gap: var(--space-6);
+  }
+
+  .leadership-photo-wrap {
+    margin: 0;
+    padding: 0;
+  }
+
+  .leadership-photo--nada,
+  .leadership-photo--chaplain {
+    width: min(100%, 13rem);
+    max-width: 13rem;
   }
 }
 
