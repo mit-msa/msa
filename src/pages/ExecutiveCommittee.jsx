@@ -19,7 +19,7 @@ const committeeRoles = [
   {
     title: 'Treasurer',
     description:
-      'The treasury chair is responsible for managing the finances of the MSA, ensuring availability of funds, and coordinating the budget and spending across MSA events.',
+      'The teasurer is responsible for managing the finances of the MSA, ensuring availability of funds, and coordinating the budget and spending across MSA events.',
   },
   {
     title: 'External Committee Chair',
