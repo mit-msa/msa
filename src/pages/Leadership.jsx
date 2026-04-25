@@ -23,7 +23,7 @@ export default function Leadership() {
               <img
                 src={nadaImage}
                 alt="Sister Nada Miqdadi El-Alami"
-                className="w-48 h-48 object-cover rounded-lg shadow-md"
+                className="leadership-photo leadership-photo--nada rounded-lg shadow-md"
               />
             </div>
             <div>
