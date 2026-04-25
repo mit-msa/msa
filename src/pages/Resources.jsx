@@ -19,6 +19,9 @@ import foodlandImg from '../assets/images/off_campus_resources/foodland.jpeg';
 import qualityImg from '../assets/images/off_campus_resources/quality.jpeg';
 import cheemasImg from '../assets/images/off_campus_resources/cheemas.jpeg';
 
+// MSA lounge images
+import loungeImg1 from '../assets/images/Lounge pics/WhatsApp Image 2026-04-24 at 21.52.34.jpeg';
+
 /**
  * Resources page - Helpful resources for Muslims at MIT
  */
@@ -102,6 +105,14 @@ export default function Resources() {
       website: '',
       description: 'Community mosque in the Brighton area.',
       image: yusufImg,
+    },
+  ];
+
+  const msaLoungeImages = [
+    {
+      title: 'MSA Lounge - Seating Area',
+      description: 'A cozy corner for catching up with friends, studying, and relaxing between classes.',
+      image: loungeImg1,
     },
   ];
 
@@ -304,6 +315,27 @@ export default function Resources() {
                   <p className="card__text">{link.description}</p>
                 </div>
               </a>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* MSA Lounge */}
+      <Section id="msa-lounge">
+        <div className="container">
+          <h2 className="text-3xl font-bold mb-6 text-center">MSA Lounge</h2>
+          <p className="text-muted mb-8 text-center max-w-md mx-auto">
+            A welcoming and cozy place where you can hang out with fellow members of the MSA and enjoy the many events held here.
+          </p>
+          <div className="grid grid--1">
+            {msaLoungeImages.map((item) => (
+              <Card key={item.title}>
+                <Card.Image src={item.image} alt={item.title} />
+                <Card.Content>
+                  <Card.Title>{item.title}</Card.Title>
+                  <Card.Text>{item.description}</Card.Text>
+                </Card.Content>
+              </Card>
             ))}
           </div>
         </div>
