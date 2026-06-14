@@ -216,12 +216,12 @@ export default function Prayer() {
               Use the MIT interactive campus map to find prayer spaces and get directions.
             </p>
             <a
-              href="https://whereis.mit.edu/?go=W11"
+              href="https://whereis.mit.edu/?go=W11?go=W15?go=E52?go=E51?go=10?go=45?go=E38?go=50"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn--primary"
             >
-              Open MIT Map (W11 - Musalla)
+              Open MIT Map
             </a>
           </div>
         </div>
