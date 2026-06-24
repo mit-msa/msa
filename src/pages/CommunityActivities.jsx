@@ -106,7 +106,7 @@ const communityEvents = [
     tag: 'Ramadan',
     summary:
       'An early-morning suhoor trip during Ramadan 2025 that brought students together for a shared meal before dawn.',
-    location: 'Greater Boston area',
+    location: 'Revere Beach',
     photos: suhoorTrip2025Photos,
   },
   {
