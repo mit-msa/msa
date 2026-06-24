@@ -249,7 +249,7 @@ export default function Resources() {
   ];
 
   const usefulLinks = [
-    { name: 'MIT Chaplaincy', url: 'https://studentlife.mit.edu/rl', description: 'MIT Religious Life office' },
+    { name: 'MIT Chaplaincy', url: 'https://studentlife.mit.edu/wellbeing-support/religious-spiritual-and-ethical-life/', description: 'MIT Religious Life office' },
     { name: 'MIT Events Calendar', url: 'https://calendar.google.com/calendar/embed?src=mit.msa.docs%40gmail.com&ctz=America%2FNew_York', description: 'Official MIT MSA events' },
     { name: 'IslamicFinder', url: 'https://www.islamicfinder.org', description: 'Prayer times and Qibla direction' },
   ];
@@ -309,6 +309,14 @@ export default function Resources() {
         { name: 'Yasmin Mogahed (video)', url: 'https://www.youtube.com/watch?v=m5Wt_h7_WPQ' },
         { name: 'Female Companions', url: 'https://ayeina.com/stories-of-sahabiyat/' },
         { name: 'Islamic Ruling on Hijab', url: 'https://yaqeeninstitute.org/read/paper/is-hijab-religious-or-cultural-how-islamic-rulings-are-formed' },
+        { name: 'Real Talk with Tesneem Alkiek', url: 'https://youtu.be/1ntGWuLu4Sk?si=rhzBVz_R03IMrHTq' },
+        { name: 'Gender Relations with Sheikh Abdullah Adhami', url: 'https://youtu.be/NhPIQIGw1GE?si=ZIIomMRNCfAfE1qD' },
+      ],
+    },
+    {
+      category: 'Men',
+      links: [
+        { name: 'Iman Cave by Abdullah Oduro', url: 'https://www.youtube.com/results?search_query=iman+cave+with+sh.+abdullah+oduro' },
       ],
     },
     {

@@ -43,7 +43,7 @@ export default function Home() {
                 The MIT Muslim Students Association is a close-knit and friendly
                 community that aims to assist MIT Muslims with their practice of
                 Islam and endeavors to promote understanding between Muslims and
-                people of other faiths on campus.
+                people of other faiths and of no faith on campus.
               </p>
               <p className="text-muted mb-8">
                 Representing hundreds of Muslims on campus, the MSA holds events

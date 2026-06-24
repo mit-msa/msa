@@ -168,7 +168,7 @@ export default function Leadership() {
           <p className="text-muted">
             For more information about Muslim chaplaincy at MIT, please contact the{' '}
             <a
-              href="https://studentlife.mit.edu/rl"
+              href="https://studentlife.mit.edu/wellbeing-support/religious-spiritual-and-ethical-life/"
               target="_blank"
               rel="noopener noreferrer"
               className="link"

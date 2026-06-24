@@ -240,7 +240,7 @@ export default function Prayer() {
               <h3 className="location-card__title">Musalla (W11)</h3>
               <p className="location-card__description">
                 Dedicated wudu area available inside the Musalla building with separate
-                facilities for brothers and sisters.
+                facilities for brothers and sisters. Bidets are also available in W11.
               </p>
             </div>
             <div className="location-card">

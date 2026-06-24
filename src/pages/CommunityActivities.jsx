@@ -16,6 +16,26 @@ const eid26ImageModules = import.meta.glob('../assets/images/Eid 26/*.{JPG,JPEG,
   import: 'default',
 });
 
+const ramadan2026ImageModules = import.meta.glob('../assets/images/Ramadan 2026/*.{JPG,JPEG,PNG,jpg,jpeg,png}', {
+  eager: true,
+  import: 'default',
+});
+
+const gradAlumniReceptionImageModules = import.meta.glob('../assets/images/Grad and Alumni Reception/*.{JPG,JPEG,PNG,jpg,jpeg,png}', {
+  eager: true,
+  import: 'default',
+});
+
+const fallDinner2025ImageModules = import.meta.glob('../assets/images/MSA Fall Dinner 2025/*.{JPG,JPEG,PNG,jpg,jpeg,png}', {
+  eager: true,
+  import: 'default',
+});
+
+const suhoorTrip2025ImageModules = import.meta.glob('../assets/images/MSA Suhoor Trip 2025/*.{JPG,JPEG,PNG,jpg,jpeg,png}', {
+  eager: true,
+  import: 'default',
+});
+
 const freshmanOutingPhotos = [
   { src: photo1, alt: 'Freshman outing group photo' },
   { src: photo2, alt: 'Freshman outing conversation and activities' },
@@ -35,7 +55,60 @@ const eid26Photos = Object.entries(eid26ImageModules)
     alt: `Eid 26 community event photo ${index + 1}`,
   }));
 
+const ramadan2026Photos = Object.entries(ramadan2026ImageModules)
+  .sort(([pathA], [pathB]) => pathA.localeCompare(pathB, undefined, { numeric: true }))
+  .map(([, src], index) => ({
+    src,
+    alt: `Ramadan 2026 community event photo ${index + 1}`,
+  }));
+
+const gradAlumniReceptionPhotos = Object.entries(gradAlumniReceptionImageModules)
+  .sort(([pathA], [pathB]) => pathA.localeCompare(pathB, undefined, { numeric: true }))
+  .map(([, src], index) => ({
+    src,
+    alt: `Grad and Alumni Reception community event photo ${index + 1}`,
+  }));
+
+const fallDinner2025PortraitFiles = new Set([
+  'DSC_0020.JPG',
+  'DSC_0032.JPG',
+  'DSC_0034.JPG',
+]);
+
+const fallDinner2025Photos = Object.entries(fallDinner2025ImageModules)
+  .sort(([pathA], [pathB]) => {
+    const portraitA = fallDinner2025PortraitFiles.has(pathA.split('/').pop());
+    const portraitB = fallDinner2025PortraitFiles.has(pathB.split('/').pop());
+
+    if (portraitA !== portraitB) {
+      return portraitA ? 1 : -1;
+    }
+
+    return pathA.localeCompare(pathB, undefined, { numeric: true });
+  })
+  .map(([, src], index) => ({
+    src,
+    alt: `MSA Fall Dinner 2025 community event photo ${index + 1}`,
+  }));
+
+const suhoorTrip2025Photos = Object.entries(suhoorTrip2025ImageModules)
+  .sort(([pathA], [pathB]) => pathA.localeCompare(pathB, undefined, { numeric: true }))
+  .map(([, src], index) => ({
+    src,
+    alt: `MSA Suhoor Trip 2025 community event photo ${index + 1}`,
+  }));
+
 const communityEvents = [
+  {
+    id: 'msa-suhoor-trip-2025',
+    title: 'MSA Suhoor Trip 2025',
+    date: 'Spring 2025',
+    tag: 'Ramadan',
+    summary:
+      'An early-morning suhoor trip during Ramadan 2025 that brought students together for a shared meal before dawn.',
+    location: 'Greater Boston area',
+    photos: suhoorTrip2025Photos,
+  },
   {
     id: 'freshman-outing-2026',
     title: 'Freshman Outing',
@@ -47,6 +120,26 @@ const communityEvents = [
     photos: freshmanOutingPhotos,
   },
   {
+    id: 'msa-fall-dinner-2025',
+    title: 'MSA Fall Dinner 2025',
+    date: 'Fall 2025',
+    tag: 'Community Event',
+    summary:
+      'An annual fall dinner that brought the MIT MSA community together for food, fellowship, and celebration at the start of the academic year.',
+    location: 'Lobdell Hall (MIT)',
+    photos: fallDinner2025Photos,
+  },
+  {
+    id: 'ramadan-2026',
+    title: 'Ramadan 2026',
+    date: 'Spring 2026',
+    tag: 'Community Event',
+    summary:
+      'Community iftars and gatherings throughout Ramadan 2026 that brought students together for shared meals, prayer, and reflection.',
+    location: 'Lobdell Hall (MIT)',
+    photos: ramadan2026Photos,
+  },
+  {
     id: 'eid-26-2026',
     title: 'Eid 26',
     date: 'Spring 2026',
@@ -55,6 +148,16 @@ const communityEvents = [
       'An Eid celebration that brought the MIT MSA community together for reflection, food, and fellowship during Spring 2026.',
     location: 'Lobdell Hall (MIT)',
     photos: eid26Photos,
+  },
+  {
+    id: 'grad-alumni-reception-2026',
+    title: 'Grad & Alumni Reception',
+    date: 'Spring 2026',
+    tag: 'Graduation',
+    summary:
+      'A reception honoring graduating students and welcoming alumni back to celebrate their milestones with the MIT MSA community.',
+    location: 'MIT Musalla (W11)',
+    photos: gradAlumniReceptionPhotos,
   },
 ];
 
