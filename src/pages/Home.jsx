@@ -212,13 +212,13 @@ export default function Home() {
               Join our mailing list to receive updates about events, prayer
               times, and community news.
             </p>
-            <p className="cta-section__text">
-              Email{' '}
-              <a className="link" href="mailto:msa-webmaster@mit.edu">
-                msa-webmaster@mit.edu
-              </a>{' '}
-              to join the mailing list.
-            </p>
+            <Button
+              href="https://forms.gle/VNuNeHCSSyB9x7Df7"
+              variant="primary"
+              size="lg"
+            >
+              Subscribe to Mailing List
+            </Button>
           </div>
         </div>
       </Section>
