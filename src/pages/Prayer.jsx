@@ -1,4 +1,5 @@
 import { Hero, Section, Card } from '../components/ui';
+import MasjidalPrayerWidget from '../components/MasjidalPrayerWidget';
 
 // Prayer space images
 import w11Image from '../assets/images/prayer/w11.jpg';
@@ -92,19 +93,9 @@ export default function Prayer() {
             View the current prayer times for MIT Musalla, including Adhan and Iqama times for all daily prayers.
           </p>
 
-          <div className="card card--bordered p-6 text-center mb-8">
-            <h3 className="card__title mb-4">MIT Musalla Prayer Times</h3>
-            <p className="text-muted mb-6">
-              MAWAQIT provides accurate, up-to-date prayer times including Adhan and Iqama schedules.
-            </p>
-            <a
-              href="https://mawaqit.net/en/mit-musallah-cambridge-02139-united-states-1"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn--primary btn--lg"
-            >
-              View Prayer Times on MAWAQIT
-            </a>
+          <div className="card card--bordered p-6 mb-8">
+            <h3 className="card__title mb-4 text-center">MIT Musalla Prayer Times</h3>
+            <MasjidalPrayerWidget />
           </div>
 
           <div className="info-box">
